@@ -6,6 +6,7 @@
 git clone https://github.com/Kainiko943/beautiful-ui.git
 Copy-Item -Recurse beautiful-ui\beautiful-ui $env:USERPROFILE\.codex\skills\
 Copy-Item -Recurse beautiful-ui\platform-web-ui $env:USERPROFILE\.codex\skills\
+Copy-Item -Recurse beautiful-ui\cinematic-web-experience $env:USERPROFILE\.codex\skills\
 Copy-Item -Recurse beautiful-ui\platform-ios-ui $env:USERPROFILE\.codex\skills\
 Copy-Item -Recurse beautiful-ui\platform-android-ui $env:USERPROFILE\.codex\skills\
 Copy-Item -Recurse beautiful-ui\ui-verification $env:USERPROFILE\.codex\skills\
@@ -20,6 +21,7 @@ Copy the same skill folders into your Claude skills directory, preserving folder
 Add these files as project rules or agent context:
 
 - `beautiful-ui/SKILL.md`
+- `cinematic-web-experience/SKILL.md` for immersive, demo-worthy web experiences
 - the relevant platform adapter
 - `ui-verification/SKILL.md`
 

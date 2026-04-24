@@ -4,6 +4,7 @@
 
 - Ship the core `beautiful-ui` skill.
 - Ship web, iOS, Android, and verification skills.
+- Ship cinematic web experience guidance for demo-worthy WebGL/Three.js-style launches.
 - Publish five before/after examples.
 - Document install paths for major agent surfaces.
 - Add contribution and issue templates.
@@ -32,4 +33,3 @@
 - Stabilize v1.0 package structure.
 - Add contributor credits and usage badge.
 - Relaunch with measured improvements from examples and evals.
-

@@ -53,6 +53,8 @@ $requiredFiles = @(
   'beautiful-ui/references/platform-selection.md',
   'beautiful-ui/references/repo-first-design.md',
   'platform-web-ui/SKILL.md',
+  'cinematic-web-experience/SKILL.md',
+  'cinematic-web-experience/references/cinematic-web-guidelines.md',
   'platform-ios-ui/SKILL.md',
   'platform-android-ui/SKILL.md',
   'ui-verification/SKILL.md',
@@ -60,6 +62,7 @@ $requiredFiles = @(
   'examples/mobile-finance-app.md',
   'examples/admin-table.md',
   'examples/landing-page.md',
+  'examples/cinematic-web-experience.md',
   'examples/settings-forms-flow.md',
   'docs/launch-plan.md',
   'docs/install.md',
@@ -72,6 +75,7 @@ $requiredFiles = @(
 $requiredDirectories = @(
   'beautiful-ui',
   'platform-web-ui',
+  'cinematic-web-experience',
   'platform-ios-ui',
   'platform-android-ui',
   'ui-verification',
@@ -89,6 +93,7 @@ foreach ($file in $requiredFiles) {
 }
 
 Assert-Contains 'README.md' 'Make AI coding agents design beautiful, accessible, platform-native UI' 'public tagline'
+Assert-Contains 'README.md' 'demo-worthy cinematic web experiences' 'cinematic positioning'
 Assert-Contains 'README.md' '10-second value demo' 'demo section'
 Assert-Contains 'README.md' 'Compatibility matrix' 'compatibility section'
 Assert-Contains 'README.md' 'Born from a component-driven UI framework, rebuilt for AI agents' 'Material heritage note'
@@ -96,6 +101,9 @@ Assert-Contains 'README.md' 'https://github.com/Kainiko943/beautiful-ui' 'public
 Assert-Contains 'docs/install.md' 'https://github.com/Kainiko943/beautiful-ui' 'install repository URL'
 Assert-Contains 'beautiful-ui/SKILL.md' '^name: beautiful-ui$' 'core skill metadata'
 Assert-Contains 'platform-web-ui/SKILL.md' '^name: platform-web-ui$' 'web adapter metadata'
+Assert-Contains 'cinematic-web-experience/SKILL.md' '^name: cinematic-web-experience$' 'cinematic web skill metadata'
+Assert-Contains 'cinematic-web-experience/SKILL.md' 'Three.js|WebGL' 'cinematic web technology guidance'
+Assert-Contains 'cinematic-web-experience/SKILL.md' 'Playwright' 'cinematic web verification guidance'
 Assert-Contains 'platform-ios-ui/SKILL.md' '^name: platform-ios-ui$' 'iOS adapter metadata'
 Assert-Contains 'platform-android-ui/SKILL.md' '^name: platform-android-ui$' 'Android adapter metadata'
 Assert-Contains 'ui-verification/SKILL.md' '^name: ui-verification$' 'verification metadata'

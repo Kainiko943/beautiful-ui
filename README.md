@@ -2,7 +2,7 @@
 
 Make AI coding agents design beautiful, accessible, platform-native UI.
 
-Beautiful UI is an agent skill package for Codex, Claude Code, Cursor-style agents, and other coding assistants. It teaches agents to choose a visual direction, reuse the repo's design system, cover states, adapt to the target platform, and verify the handoff before writing UI code.
+Beautiful UI is an agent skill package for Codex, Claude Code, Cursor-style agents, and other coding assistants. It teaches agents to choose a visual direction, reuse the repo's design system, cover states, adapt to the target platform, and verify the handoff before writing UI code. It now includes a cinematic web path for demo-worthy cinematic web experiences with WebGL/Three.js direction, motion systems, responsive fallbacks, and visual verification.
 
 ![Beautiful UI comparison: without beautiful-ui vs with beautiful-ui](docs/assets/beautiful-ui-comparison.png)
 
@@ -36,6 +36,7 @@ Manual install:
 git clone https://github.com/Kainiko943/beautiful-ui.git
 cp -R beautiful-ui/beautiful-ui ~/.codex/skills/
 cp -R beautiful-ui/platform-web-ui ~/.codex/skills/
+cp -R beautiful-ui/cinematic-web-experience ~/.codex/skills/
 cp -R beautiful-ui/platform-ios-ui ~/.codex/skills/
 cp -R beautiful-ui/platform-android-ui ~/.codex/skills/
 cp -R beautiful-ui/ui-verification ~/.codex/skills/
@@ -69,12 +70,17 @@ Use beautiful-ui to rescue this interface from generic AI UI. Keep what fits the
 Use beautiful-ui with the web adapter. Design responsive desktop and mobile layouts, including hover, focus, disabled, validation, empty, and error states.
 ```
 
+```text
+Use beautiful-ui and cinematic-web-experience to build a premium dark WebGL landing page with a full-screen hero, particles, bloom, glass panels, scroll reveals, reduced-motion fallback, and Playwright screenshot verification.
+```
+
 ## Before/after examples
 
 - [SaaS dashboard](examples/saas-dashboard.md)
 - [Mobile finance app](examples/mobile-finance-app.md)
 - [Admin table](examples/admin-table.md)
 - [Landing page](examples/landing-page.md)
+- [Cinematic web experience](examples/cinematic-web-experience.md)
 - [Settings and forms flow](examples/settings-forms-flow.md)
 
 Each example includes the weak prompt, the stronger beautiful-ui prompt, and the expected handoff shape.
@@ -86,7 +92,7 @@ Each example includes the weak prompt, the stronger beautiful-ui prompt, and the
 - Not a screenshot cloning workflow.
 - Not a replacement for platform design judgment.
 
-Beautiful UI improves agent design behavior before implementation so generated interfaces have stronger hierarchy, better states, clearer accessibility, and better platform fit.
+Beautiful UI improves agent design behavior before implementation so generated interfaces have stronger hierarchy, better states, clearer accessibility, better platform fit, and a path to cinematic demo-quality web experiences when the product calls for it.
 
 ## Roadmap
 
