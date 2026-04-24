@@ -1,0 +1,20 @@
+name: Documentation fix
+description: Report unclear docs, install steps, or examples.
+title: "Docs: "
+labels: ["documentation"]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Page or file
+      description: Which file needs attention?
+    validations:
+      required: true
+  - type: textarea
+    id: issue
+    attributes:
+      label: Issue
+      description: What is confusing, missing, or incorrect?
+    validations:
+      required: true
+

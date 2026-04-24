@@ -1,0 +1,27 @@
+name: Example request
+description: Suggest a before/after UI example for beautiful-ui.
+title: "Example: "
+labels: ["example"]
+body:
+  - type: input
+    id: scenario
+    attributes:
+      label: Scenario
+      description: What product or workflow should the example cover?
+    validations:
+      required: true
+  - type: textarea
+    id: before
+    attributes:
+      label: Weak prompt
+      description: What generic prompt should the example improve?
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected handoff
+      description: What should beautiful-ui force the agent to cover?
+    validations:
+      required: true
+

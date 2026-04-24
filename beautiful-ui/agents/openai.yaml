@@ -1,0 +1,4 @@
+display_name: Beautiful UI
+short_description: Designs beautiful, accessible, platform-native UI handoffs for coding agents.
+default_prompt: Use beautiful-ui to design this interface. Inspect the repo first, choose a visual direction, define the design-system core, design key screens and states, select the right platform adapter, and run ui-verification before handoff.
+

@@ -1,0 +1,25 @@
+name: Adapter improvement
+description: Improve platform-specific guidance.
+title: "Adapter: "
+labels: ["adapter"]
+body:
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options:
+        - Web
+        - iOS
+        - Android
+        - Desktop
+        - Cross-platform
+    validations:
+      required: true
+  - type: textarea
+    id: improvement
+    attributes:
+      label: Improvement
+      description: What platform-native behavior should the adapter add or clarify?
+    validations:
+      required: true
+
