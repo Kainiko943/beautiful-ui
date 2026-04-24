@@ -31,13 +31,17 @@ See [docs/install.md](docs/install.md) for copy-paste setup.
 Manual install:
 
 ```bash
-git clone https://github.com/YOUR_ORG/beautiful-ui.git
+git clone https://github.com/Kainiko943/beautiful-ui.git
 cp -R beautiful-ui/beautiful-ui ~/.codex/skills/
 cp -R beautiful-ui/platform-web-ui ~/.codex/skills/
 cp -R beautiful-ui/platform-ios-ui ~/.codex/skills/
 cp -R beautiful-ui/platform-android-ui ~/.codex/skills/
 cp -R beautiful-ui/ui-verification ~/.codex/skills/
 ```
+
+## Repository status
+
+This is a v0.1 launch package. The skill interface is intentionally small and stable enough to try, while the examples and platform adapters will grow through community contributions.
 
 ## Compatibility matrix
 
@@ -85,4 +89,3 @@ Beautiful UI improves agent design behavior before implementation so generated i
 ## Roadmap
 
 See [ROADMAP.md](ROADMAP.md) and [docs/launch-plan.md](docs/launch-plan.md).
-

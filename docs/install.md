@@ -3,7 +3,7 @@
 ## Local Codex install
 
 ```powershell
-git clone https://github.com/YOUR_ORG/beautiful-ui.git
+git clone https://github.com/Kainiko943/beautiful-ui.git
 Copy-Item -Recurse beautiful-ui\beautiful-ui $env:USERPROFILE\.codex\skills\
 Copy-Item -Recurse beautiful-ui\platform-web-ui $env:USERPROFILE\.codex\skills\
 Copy-Item -Recurse beautiful-ui\platform-ios-ui $env:USERPROFILE\.codex\skills\
@@ -49,4 +49,3 @@ powershell -ExecutionPolicy Bypass -File scripts/validate-package.ps1
 - If a skill does not trigger, confirm the folder contains `SKILL.md` at its root.
 - If platform guidance is missing, copy the adapter folder next to `beautiful-ui`.
 - If output jumps straight into code, explicitly say: "Use beautiful-ui before implementation."
-

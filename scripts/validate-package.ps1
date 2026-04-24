@@ -39,8 +39,11 @@ function Assert-Contains([string]$relativePath, [string]$pattern, [string]$label
 $requiredFiles = @(
   'README.md',
   'LICENSE.md',
+  'CODE_OF_CONDUCT.md',
   'CONTRIBUTING.md',
   'ROADMAP.md',
+  'SECURITY.md',
+  'SUPPORT.md',
   'beautiful-ui/SKILL.md',
   'beautiful-ui/agents/openai.yaml',
   'beautiful-ui/references/design-principles.md',
@@ -62,7 +65,8 @@ $requiredFiles = @(
   'docs/install.md',
   '.github/ISSUE_TEMPLATE/example.yml',
   '.github/ISSUE_TEMPLATE/adapter.yml',
-  '.github/ISSUE_TEMPLATE/docs.yml'
+  '.github/ISSUE_TEMPLATE/docs.yml',
+  '.github/ISSUE_TEMPLATE/config.yml'
 )
 
 $requiredDirectories = @(
@@ -88,6 +92,8 @@ Assert-Contains 'README.md' 'Make AI coding agents design beautiful, accessible,
 Assert-Contains 'README.md' '10-second value demo' 'demo section'
 Assert-Contains 'README.md' 'Compatibility matrix' 'compatibility section'
 Assert-Contains 'README.md' 'Born from a component-driven UI framework, rebuilt for AI agents' 'Material heritage note'
+Assert-Contains 'README.md' 'https://github.com/Kainiko943/beautiful-ui' 'public repository URL'
+Assert-Contains 'docs/install.md' 'https://github.com/Kainiko943/beautiful-ui' 'install repository URL'
 Assert-Contains 'beautiful-ui/SKILL.md' '^name: beautiful-ui$' 'core skill metadata'
 Assert-Contains 'platform-web-ui/SKILL.md' '^name: platform-web-ui$' 'web adapter metadata'
 Assert-Contains 'platform-ios-ui/SKILL.md' '^name: platform-ios-ui$' 'iOS adapter metadata'

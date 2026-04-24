@@ -1,0 +1,6 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Install help
+    url: https://github.com/Kainiko943/beautiful-ui/blob/main/docs/install.md
+    about: Read the install guide before opening a setup issue.
+
