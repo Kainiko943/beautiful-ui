@@ -64,6 +64,7 @@ $requiredFiles = @(
   'examples/landing-page.md',
   'examples/cinematic-web-experience.md',
   'examples/settings-forms-flow.md',
+  'recipes/claude-cinematic-web.md',
   'docs/launch-plan.md',
   'docs/install.md',
   '.github/ISSUE_TEMPLATE/example.yml',
@@ -81,6 +82,7 @@ $requiredDirectories = @(
   'ui-verification',
   'examples',
   'docs',
+  'recipes',
   '.github/ISSUE_TEMPLATE'
 )
 
@@ -104,6 +106,10 @@ Assert-Contains 'platform-web-ui/SKILL.md' '^name: platform-web-ui$' 'web adapte
 Assert-Contains 'cinematic-web-experience/SKILL.md' '^name: cinematic-web-experience$' 'cinematic web skill metadata'
 Assert-Contains 'cinematic-web-experience/SKILL.md' 'Three.js|WebGL' 'cinematic web technology guidance'
 Assert-Contains 'cinematic-web-experience/SKILL.md' 'Playwright' 'cinematic web verification guidance'
+Assert-Contains 'cinematic-web-experience/SKILL.md' 'Recreate A Reference Experience' 'reference recreation workflow'
+Assert-Contains 'recipes/claude-cinematic-web.md' 'WORK.*CONTACT' 'minimal nav requirement'
+Assert-Contains 'recipes/claude-cinematic-web.md' 'nonblank canvas' 'canvas verification requirement'
+Assert-Contains 'recipes/claude-cinematic-web.md' 'recreate the style' 'recreation prompt'
 Assert-Contains 'platform-ios-ui/SKILL.md' '^name: platform-ios-ui$' 'iOS adapter metadata'
 Assert-Contains 'platform-android-ui/SKILL.md' '^name: platform-android-ui$' 'Android adapter metadata'
 Assert-Contains 'ui-verification/SKILL.md' '^name: ui-verification$' 'verification metadata'

@@ -74,6 +74,8 @@ Use beautiful-ui with the web adapter. Design responsive desktop and mobile layo
 Use beautiful-ui and cinematic-web-experience to build a premium dark WebGL landing page with a full-screen hero, particles, bloom, glass panels, scroll reveals, reduced-motion fallback, and Playwright screenshot verification.
 ```
 
+For a stricter Claude-ready workflow, use [the cinematic web recipe](recipes/claude-cinematic-web.md).
+
 ## Before/after examples
 
 - [SaaS dashboard](examples/saas-dashboard.md)

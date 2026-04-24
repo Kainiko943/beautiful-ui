@@ -12,3 +12,5 @@ The gallery is intentionally prompt-led in v0.1. Each example shows how a weak p
 | Settings forms flow | Flat forms | Clear save, validation, and destructive-action states |
 
 Future gallery versions should add rendered screenshots and agent evals comparing outputs with and without the skill.
+
+For cinematic reference recreation, use [Claude Cinematic Web Recipe](../recipes/claude-cinematic-web.md).

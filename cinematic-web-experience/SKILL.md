@@ -33,6 +33,29 @@ Start with `beautiful-ui` for product intent and visual direction, then use this
 6. Implement a real first screen, not a marketing placeholder.
 7. Verify with browser preview, Playwright screenshots, and a nonblank canvas/visual asset check.
 
+## Recreate A Reference Experience
+
+When the user provides a video, screenshot, website, or phrase like "make it like this," translate the reference into reproducible traits instead of copying blindly.
+
+1. Extract the visual traits:
+   - mood and genre
+   - first-viewport composition
+   - focal object
+   - lighting and color
+   - navigation style
+   - motion beats
+   - interaction model
+   - section structure
+2. Turn the traits into a build contract:
+   - full-screen cinematic hero
+   - sparse nav with labels like `WORK` and `CONTACT` when appropriate
+   - one central WebGL/Three.js focal scene
+   - particles, bloom, glow, glass, or smoke only where they support the subject
+   - scroll-driven reveal section after the hero
+   - responsive and reduced-motion fallbacks
+3. Implement the closest feasible version using the current repo stack.
+4. Verify visually. If the first screenshot does not feel demo-worthy, iterate on composition, lighting, density, and motion before calling it complete.
+
 ## Handoff Must Include
 
 - Cinematic promise
@@ -51,6 +74,7 @@ Start with `beautiful-ui` for product intent and visual direction, then use this
 - The first viewport must create a clear "how did AI make this?" moment.
 - The main visual must be actual rendered media, canvas, video, image, or 3D, not a gradient blob.
 - Navigation must stay minimal and legible.
+- A reference-inspired build must preserve the reference's mood, composition, motion energy, and premium feel without copying protected branding or assets.
 - Motion must support reveal, depth, or interaction.
 - Mobile must keep the same mood without forcing a broken desktop scene.
 - Reduced motion must preserve the content without the cinematic effects.
@@ -58,4 +82,3 @@ Start with `beautiful-ui` for product intent and visual direction, then use this
 ## Read Next
 
 - `references/cinematic-web-guidelines.md`
-
