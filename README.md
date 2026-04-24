@@ -6,8 +6,6 @@ Beautiful UI is an agent skill package for Codex, Claude Code, Cursor-style agen
 
 ![Beautiful UI comparison: without beautiful-ui vs with beautiful-ui](docs/assets/beautiful-ui-comparison.png)
 
-[Watch the short demo on TikTok](https://www.tiktok.com/@alaa.y.baraka/video/7631319601330113813)
-
 Born from a component-driven UI framework, rebuilt for AI agents.
 
 ## 10-second value demo
