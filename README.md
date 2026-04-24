@@ -4,6 +4,8 @@ Make AI coding agents design beautiful, accessible, platform-native UI.
 
 Beautiful UI is an agent skill package for Codex, Claude Code, Cursor-style agents, and other coding assistants. It teaches agents to choose a visual direction, reuse the repo's design system, cover states, adapt to the target platform, and verify the handoff before writing UI code.
 
+![Beautiful UI comparison: without beautiful-ui vs with beautiful-ui](docs/assets/beautiful-ui-comparison.png)
+
 Born from a component-driven UI framework, rebuilt for AI agents.
 
 ## 10-second value demo
