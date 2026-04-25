@@ -33,6 +33,7 @@ Use this skill when the primary job is UI design quality. Do not jump straight i
 ## Adapter Selection
 
 - Use `platform-web-ui` for responsive browser products.
+- Use `cinematic-web-experience` with `platform-web-ui` when the user asks for a premium, demo-worthy, immersive, WebGL, Three.js, portfolio, product showcase, or wow-factor web experience.
 - Use `platform-ios-ui` for iPhone or iPad-first native apps.
 - Use `platform-android-ui` for Android-first native apps.
 - Use multiple adapters only when the product must span platforms.
@@ -47,6 +48,15 @@ Use this skill when the primary job is UI design quality. Do not jump straight i
 - `references/platform-selection.md`
 - `references/repo-first-design.md`
 
+## Claude Upgrade Path
+
+When the user is using Claude Code and wants a noticeably better UI result, route them through:
+
+- `docs/claude-quickstart.md`
+- `docs/s-tier-quality-bar.md`
+- `recipes/claude-cinematic-web.md` for cinematic web work
+- `evals/cinematic-prompts.md` for before/after quality checks
+
 ## Guardrails
 
 - Do not start with implementation.
@@ -55,4 +65,3 @@ Use this skill when the primary job is UI design quality. Do not jump straight i
 - Do not force pixel parity across platforms.
 - Do not invent components before checking the repo.
 - Do not skip accessibility, localization pressure, reduced motion, focus behavior, or state coverage.
-

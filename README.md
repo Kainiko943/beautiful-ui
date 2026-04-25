@@ -2,11 +2,20 @@
 
 Make AI coding agents design beautiful, accessible, platform-native UI.
 
-Beautiful UI is an agent skill package for Codex, Claude Code, Cursor-style agents, and other coding assistants. It teaches agents to choose a visual direction, reuse the repo's design system, cover states, adapt to the target platform, and verify the handoff before writing UI code. It now includes a cinematic web path for demo-worthy cinematic web experiences with WebGL/Three.js direction, motion systems, responsive fallbacks, and visual verification.
+Beautiful UI is the taste layer Claude users install when they want S-tier UI instead of generic AI screens. It teaches Codex, Claude Code, Cursor-style agents, and other coding assistants to choose a visual direction, reuse the repo's design system, cover states, adapt to the target platform, and verify the handoff before writing UI code. It includes a cinematic web path for demo-worthy cinematic web experiences with WebGL/Three.js direction, motion systems, responsive fallbacks, and visual verification.
 
 ![Beautiful UI comparison: without beautiful-ui vs with beautiful-ui](docs/assets/beautiful-ui-comparison.png)
 
 Born from a component-driven UI framework, rebuilt for AI agents.
+
+## Why Claude users install it
+
+- Claude stops jumping straight to generic layouts.
+- It gets a repeatable design workflow before implementation.
+- Cinematic builds get a strict recipe: WebGL/Three.js, particles, bloom, glass, scroll reveals, fallbacks, and Playwright screenshots.
+- Every output is judged against an S-tier quality bar before it is treated as complete.
+
+Start here: [Claude quickstart](docs/claude-quickstart.md), [S-tier quality bar](docs/s-tier-quality-bar.md), and [cinematic eval prompts](evals/cinematic-prompts.md).
 
 ## 10-second value demo
 

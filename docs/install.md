@@ -31,6 +31,12 @@ Add these files as project rules or agent context:
 Use beautiful-ui to redesign this app screen. Start with visual direction, define the design-system core, select the platform adapter, cover states, and run ui-verification before handoff.
 ```
 
+Claude cinematic smoke test:
+
+```text
+Use beautiful-ui, platform-web-ui, cinematic-web-experience, and ui-verification to build a demo-worthy dark cinematic landing page with WORK / CONTACT nav, WebGL-style focal scene, particles, bloom, glass panels, scroll reveal, mobile fallback, reduced-motion fallback, Playwright screenshots, and nonblank canvas/media verification.
+```
+
 Expected response shape:
 
 - Visual direction

@@ -43,6 +43,12 @@ Acceptance criteria:
 - A nonblank canvas/media check passes.
 ```
 
+## One-Line Version
+
+```text
+Use beautiful-ui, cinematic-web-experience, and the S-tier quality bar to build a premium WebGL-style cinematic page, then verify it with Playwright screenshots and a nonblank canvas/media check before calling it complete.
+```
+
 ## Build Checklist
 
 - Cinematic promise written before implementation.
@@ -64,4 +70,3 @@ Acceptance criteria:
 - Using decorative gradient blobs as the main visual.
 - Shipping without screenshot review.
 - Ignoring slow-device, mobile, or reduced-motion behavior.
-

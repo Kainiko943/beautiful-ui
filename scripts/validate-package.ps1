@@ -65,6 +65,9 @@ $requiredFiles = @(
   'examples/cinematic-web-experience.md',
   'examples/settings-forms-flow.md',
   'recipes/claude-cinematic-web.md',
+  'docs/claude-quickstart.md',
+  'docs/s-tier-quality-bar.md',
+  'evals/cinematic-prompts.md',
   'docs/launch-plan.md',
   'docs/install.md',
   '.github/ISSUE_TEMPLATE/example.yml',
@@ -83,6 +86,7 @@ $requiredDirectories = @(
   'examples',
   'docs',
   'recipes',
+  'evals',
   '.github/ISSUE_TEMPLATE'
 )
 
@@ -96,6 +100,8 @@ foreach ($file in $requiredFiles) {
 
 Assert-Contains 'README.md' 'Make AI coding agents design beautiful, accessible, platform-native UI' 'public tagline'
 Assert-Contains 'README.md' 'demo-worthy cinematic web experiences' 'cinematic positioning'
+Assert-Contains 'README.md' 'Claude users' 'Claude positioning'
+Assert-Contains 'README.md' 'S-tier' 'S-tier positioning'
 Assert-Contains 'README.md' '10-second value demo' 'demo section'
 Assert-Contains 'README.md' 'Compatibility matrix' 'compatibility section'
 Assert-Contains 'README.md' 'Born from a component-driven UI framework, rebuilt for AI agents' 'Material heritage note'
@@ -110,6 +116,10 @@ Assert-Contains 'cinematic-web-experience/SKILL.md' 'Recreate A Reference Experi
 Assert-Contains 'recipes/claude-cinematic-web.md' 'WORK.*CONTACT' 'minimal nav requirement'
 Assert-Contains 'recipes/claude-cinematic-web.md' 'nonblank canvas' 'canvas verification requirement'
 Assert-Contains 'recipes/claude-cinematic-web.md' 'recreate the style' 'recreation prompt'
+Assert-Contains 'docs/claude-quickstart.md' 'Claude Code' 'Claude quickstart'
+Assert-Contains 'docs/s-tier-quality-bar.md' 'S-tier' 'S-tier quality bar'
+Assert-Contains 'evals/cinematic-prompts.md' 'Pass criteria' 'cinematic eval pass criteria'
+Assert-Contains 'evals/cinematic-prompts.md' 'Claude should' 'Claude eval expectation'
 Assert-Contains 'platform-ios-ui/SKILL.md' '^name: platform-ios-ui$' 'iOS adapter metadata'
 Assert-Contains 'platform-android-ui/SKILL.md' '^name: platform-android-ui$' 'Android adapter metadata'
 Assert-Contains 'ui-verification/SKILL.md' '^name: ui-verification$' 'verification metadata'
