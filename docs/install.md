@@ -14,7 +14,17 @@ Copy-Item -Recurse beautiful-ui\ui-verification $env:USERPROFILE\.codex\skills\
 
 ## Claude Code install
 
-Copy the same skill folders into your Claude skills directory, preserving folder names and each `SKILL.md` file.
+From the repository root:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts/install-claude-skills.ps1
+```
+
+The installer copies the same skill folders into `%USERPROFILE%\.claude\skills`, preserving folder names and each `SKILL.md` file. To install somewhere else:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts/install-claude-skills.ps1 -ClaudeSkillsDir "C:\path\to\claude\skills"
+```
 
 ## Cursor-style usage
 
@@ -51,6 +61,8 @@ Expected response shape:
 ```powershell
 powershell -ExecutionPolicy Bypass -File scripts/validate-package.ps1
 ```
+
+The validator checks the required skill folders, public README positioning, install script presence, and each example's `## Before Prompt`, `## Beautiful UI Prompt`, `## Expected Handoff`, Visual direction, State coverage, and Accessibility evidence.
 
 ## Troubleshooting
 

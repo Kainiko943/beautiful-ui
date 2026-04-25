@@ -32,3 +32,8 @@ Platform adapter: `platform-web-ui`.
 
 Verification: `ui-verification` confirms visual direction, responsive behavior, state coverage, accessibility, and implementation handoff.
 
+## Evidence To Capture
+
+- Before evidence: weak-prompt output showing generic cards, unclear chart purpose, missing filters, or absent state planning.
+- After evidence: Beautiful UI handoff excerpt showing the revenue-focused Visual direction, filter/table hierarchy, and platform-web-ui adapter choice.
+- Check evidence: screenshot or spec notes for loading, empty, error, disabled, selected filter, keyboard focus, and Accessibility coverage.

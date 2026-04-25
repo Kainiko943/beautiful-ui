@@ -32,3 +32,8 @@ Platform adapter: `platform-web-ui`.
 
 Verification: `ui-verification` checks first-viewport clarity, conversion hierarchy, responsiveness, and accessibility.
 
+## Evidence To Capture
+
+- Before evidence: weak-prompt output showing a vague headline, decorative gradient hero, generic feature cards, or missing conversion states.
+- After evidence: Beautiful UI handoff excerpt showing product-led Visual direction, first-viewport proof, CTA hierarchy, and platform-web-ui adapter choice.
+- Check evidence: desktop/mobile screenshots or spec notes for loading media, form validation, disabled submit, success confirmation, State coverage, and Accessibility.

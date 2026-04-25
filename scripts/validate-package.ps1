@@ -67,6 +67,7 @@ $requiredFiles = @(
   'recipes/claude-cinematic-web.md',
   'docs/claude-quickstart.md',
   'docs/s-tier-quality-bar.md',
+  'scripts/install-claude-skills.ps1',
   'evals/cinematic-prompts.md',
   'docs/launch-plan.md',
   'docs/install.md',
@@ -102,6 +103,7 @@ Assert-Contains 'README.md' 'Make AI coding agents design beautiful, accessible,
 Assert-Contains 'README.md' 'demo-worthy cinematic web experiences' 'cinematic positioning'
 Assert-Contains 'README.md' 'Claude users' 'Claude positioning'
 Assert-Contains 'README.md' 'S-tier' 'S-tier positioning'
+Assert-Contains 'README.md' 'Start in 60 seconds' 'fast-start section'
 Assert-Contains 'README.md' '10-second value demo' 'demo section'
 Assert-Contains 'README.md' 'Compatibility matrix' 'compatibility section'
 Assert-Contains 'README.md' 'Born from a component-driven UI framework, rebuilt for AI agents' 'Material heritage note'
@@ -118,6 +120,8 @@ Assert-Contains 'recipes/claude-cinematic-web.md' 'nonblank canvas' 'canvas veri
 Assert-Contains 'recipes/claude-cinematic-web.md' 'recreate the style' 'recreation prompt'
 Assert-Contains 'docs/claude-quickstart.md' 'Claude Code' 'Claude quickstart'
 Assert-Contains 'docs/s-tier-quality-bar.md' 'S-tier' 'S-tier quality bar'
+Assert-Contains 'scripts/install-claude-skills.ps1' 'cinematic-web-experience' 'Claude installer copies cinematic skill'
+Assert-Contains 'scripts/install-claude-skills.ps1' 'beautiful-ui skills installed' 'Claude installer success message'
 Assert-Contains 'evals/cinematic-prompts.md' 'Pass criteria' 'cinematic eval pass criteria'
 Assert-Contains 'evals/cinematic-prompts.md' 'Claude should' 'Claude eval expectation'
 Assert-Contains 'platform-ios-ui/SKILL.md' '^name: platform-ios-ui$' 'iOS adapter metadata'

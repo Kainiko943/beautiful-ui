@@ -32,3 +32,8 @@ Platform adapter: `platform-web-ui`.
 
 Verification: `ui-verification` checks information density, responsive behavior, state coverage, and accessibility.
 
+## Evidence To Capture
+
+- Before evidence: weak-prompt output showing oversized cards, unclear row status, weak filters, or missing bulk-action behavior.
+- After evidence: Beautiful UI handoff excerpt showing the operational Visual direction, dense table rhythm, and keyboard-first interaction plan.
+- Check evidence: screenshot or spec notes for loading rows, empty filters, failed refresh, selected rows, disabled bulk action, State coverage, and Accessibility.

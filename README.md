@@ -17,6 +17,20 @@ Born from a component-driven UI framework, rebuilt for AI agents.
 
 Start here: [Claude quickstart](docs/claude-quickstart.md), [S-tier quality bar](docs/s-tier-quality-bar.md), and [cinematic eval prompts](evals/cinematic-prompts.md).
 
+## Start in 60 seconds
+
+```powershell
+git clone https://github.com/Kainiko943/beautiful-ui.git
+cd beautiful-ui
+powershell -ExecutionPolicy Bypass -File scripts/install-claude-skills.ps1
+```
+
+Then ask your agent:
+
+```text
+Use beautiful-ui to redesign this app screen. Start with visual direction, define the design-system core, select the platform adapter, cover states, and run ui-verification before handoff.
+```
+
 ## 10-second value demo
 
 Without this skill:
@@ -54,6 +68,14 @@ cp -R beautiful-ui/ui-verification ~/.codex/skills/
 ## Repository status
 
 This is a v0.1 launch package. The skill interface is intentionally small and stable enough to try, while the examples and platform adapters will grow through community contributions.
+
+## Relationship to Material
+
+Beautiful UI was born from the neighboring `Material` UIKit framework as a seed reference for component vocabulary, theming, layout primitives, motion, navigation, cards, forms, and stateful controls. That relationship is historical and inspirational.
+
+This package is not a dependency on `Material`, not a fork or release of that Swift framework, and not a requirement to use Material Design as the product's visual style. Treat `Material` as legacy/reference context only. The current package is a set of Markdown skills, platform adapters, examples, and verification guidance for AI coding agents.
+
+The Android adapter may mention Material expectations because Android users often expect those interaction patterns, but Beautiful UI still prioritizes the product, platform, repo, and brand over any single visual language.
 
 ## Compatibility matrix
 
@@ -96,10 +118,13 @@ For a stricter Claude-ready workflow, use [the cinematic web recipe](recipes/cla
 
 Each example includes the weak prompt, the stronger beautiful-ui prompt, and the expected handoff shape.
 
+The examples are prompt-led before/after evidence, not rendered screenshot case studies yet. For each one, compare the weak prompt's likely failure mode with the Beautiful UI handoff, then capture concrete evidence: visual direction, state coverage, accessibility notes, platform adapter choice, and screenshots or browser checks when an implementation exists.
+
 ## What this is not
 
 - Not a full UI code generator.
 - Not a single visual theme.
+- Not the legacy `Material` Swift framework.
 - Not a screenshot cloning workflow.
 - Not a replacement for platform design judgment.
 

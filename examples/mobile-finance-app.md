@@ -32,3 +32,8 @@ Platform adapter: `platform-ios-ui` and `platform-android-ui`.
 
 Verification: `ui-verification` checks native navigation, privacy-sensitive states, and handoff completeness.
 
+## Evidence To Capture
+
+- Before evidence: weak-prompt output showing flashy finance styling, small financial data, missing trust cues, or no privacy treatment.
+- After evidence: Beautiful UI handoff excerpt showing the trust-focused Visual direction, platform split for iOS and Android, and calm number hierarchy.
+- Check evidence: screenshots or spec notes for hidden balance, sync loading/failure, validation, success, disabled submit, State coverage, and Accessibility.

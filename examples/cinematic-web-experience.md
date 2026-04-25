@@ -34,3 +34,8 @@ Platform adapter: `platform-web-ui` plus `cinematic-web-experience`.
 
 Verification: run local preview, capture Playwright screenshots at desktop and mobile widths, assert the canvas/media region is nonblank, check no text overlap, and run `ui-verification`.
 
+## Evidence To Capture
+
+- Before evidence: weak-prompt output showing a dark gradient, generic hero text, no art direction, no motion model, or no fallback plan.
+- After evidence: Beautiful UI handoff excerpt showing the cinematic Visual direction, focal scene structure, motion model, and platform-web-ui plus cinematic-web-experience adapter choice.
+- Check evidence: desktop and mobile Playwright screenshots, nonblank canvas/media assertion, reduced-motion fallback, WebGL unavailable fallback, State coverage, and Accessibility.

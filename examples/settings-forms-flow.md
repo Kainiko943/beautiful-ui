@@ -32,3 +32,8 @@ Platform adapter: `platform-web-ui`.
 
 Verification: `ui-verification` checks state coverage, form accessibility, navigation clarity, and implementation readiness.
 
+## Evidence To Capture
+
+- Before evidence: weak-prompt output showing flat forms, unclear save behavior, weak validation, or missing destructive-action safeguards.
+- After evidence: Beautiful UI handoff excerpt showing the dependable Visual direction, form density, save model, and platform-web-ui adapter choice.
+- Check evidence: screenshot or spec notes for dirty, saving, saved, validation error, disabled, empty invite, destructive dialog, State coverage, and Accessibility.
