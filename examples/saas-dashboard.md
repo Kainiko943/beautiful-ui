@@ -37,3 +37,9 @@ Verification: `ui-verification` confirms visual direction, responsive behavior, 
 - Before evidence: weak-prompt output showing generic cards, unclear chart purpose, missing filters, or absent state planning.
 - After evidence: Beautiful UI handoff excerpt showing the revenue-focused Visual direction, filter/table hierarchy, and platform-web-ui adapter choice.
 - Check evidence: screenshot or spec notes for loading, empty, error, disabled, selected filter, keyboard focus, and Accessibility coverage.
+
+## Rendered Evidence
+
+- [Open rendered gallery case](../docs/rendered-gallery.html#saas-dashboard)
+- [Desktop screenshot](../docs/assets/rendered-gallery-desktop.png)
+- [Mobile screenshot](../docs/assets/rendered-gallery-mobile.png)

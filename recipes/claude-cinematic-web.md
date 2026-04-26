@@ -1,6 +1,6 @@
 # Claude Cinematic Web Recipe
 
-Use this recipe when you want Claude or another coding agent to recreate the style of a premium cinematic web demo: dark full-screen hero, sparse navigation, WebGL/Three.js focal scene, particles, bloom, glass panels, and scroll-driven reveals.
+Use this recipe when you want Claude or another coding agent to recreate the style of a premium cinematic web demo: dark full-screen hero, sparse navigation, a focal scene built with the right media or 3D technology, particles, bloom, glass panels, and scroll-driven reveals.
 
 ## Copy-Paste Prompt
 
@@ -12,7 +12,7 @@ Goal: recreate the style of a premium cinematic AI-built website, not the exact 
 Reference traits to preserve:
 - Full-screen dark cinematic first viewport.
 - Sparse top navigation with WORK and CONTACT.
-- One central WebGL/Three.js-style focal object or abstract artifact.
+- One central focal object or abstract artifact. Use WebGL/Three.js only if the effect needs runtime 3D interaction; otherwise prefer video, image sequences, Lottie, Rive, Spline, or pre-rendered media.
 - Glow, bloom, particle depth, glass panels, and subtle smoke/light energy.
 - Scroll-driven reveal into a second showcase section.
 - Minimal copy, high contrast, premium spacing, and strong first impression.
@@ -21,20 +21,22 @@ Required implementation:
 1. Inspect the repo and identify the web stack.
 2. Define the cinematic promise in one sentence.
 3. Define the first viewport: focal object, backdrop, lighting, nav, CTA, and next-section hint.
-4. Use Three.js, React Three Fiber, or the closest existing 3D/canvas stack for the hero scene. If no 3D stack is feasible, create a canvas particle scene plus a static fallback.
-5. Add ambient motion, pointer response, and one scroll reveal. Respect prefers-reduced-motion.
-6. Build responsive desktop and mobile layouts.
-7. Add loading, WebGL unavailable, reduced-motion, and mobile fallback states.
-8. Keep text readable and navigation usable over the scene.
-9. Run the local dev server.
-10. Use Playwright to capture desktop and mobile screenshots.
-11. Verify the hero canvas/media is nonblank, the scene is framed correctly, text does not overlap, and the first viewport feels demo-worthy.
-12. Iterate until the screenshots look premium before calling the work complete.
+4. Pick a Cinematic Technology Ladder rung: static/generated media, looping video/image sequence, Lottie/Rive, Spline, CSS/SVG/light canvas, Three.js/R3F, or custom shaders/GPGPU. Explain why that rung is enough.
+5. Use Three.js, React Three Fiber, or custom shaders only when runtime interaction, procedural motion, 3D camera control, particle behavior, or scene composition truly requires it. If visual impact is the main goal, fake the WebGL with pre-rendered or embedded media and make the fallback excellent.
+6. Add ambient motion, pointer response when useful, and one scroll reveal. Respect prefers-reduced-motion.
+7. Build responsive desktop and mobile layouts.
+8. Add loading, media/WebGL unavailable, reduced-motion, and mobile fallback states.
+9. Keep text readable and navigation usable over the scene.
+10. Run the local dev server.
+11. Use Playwright to capture desktop and mobile screenshots.
+12. Verify the hero canvas/media/embed is nonblank, the scene is framed correctly, text does not overlap, and the first viewport feels demo-worthy.
+13. Iterate until the screenshots look premium before calling the work complete.
 
 Acceptance criteria:
 - The first viewport is full-screen or near full-screen and immediately cinematic.
 - Navigation includes WORK and CONTACT or equivalent minimal labels.
-- The hero contains rendered media, canvas, or 3D; it is not only a gradient.
+- The hero contains rendered media, video, image sequence, Lottie, Rive, Spline, canvas, or 3D; it is not only a gradient.
+- The implementation stack choice is justified against the Cinematic Technology Ladder.
 - There is visible particle/glow/depth treatment.
 - There is at least one scroll reveal or staged transition.
 - Reduced-motion mode keeps the content usable.
@@ -46,7 +48,7 @@ Acceptance criteria:
 ## One-Line Version
 
 ```text
-Use beautiful-ui, cinematic-web-experience, and the S-tier quality bar to build a premium WebGL-style cinematic page, then verify it with Playwright screenshots and a nonblank canvas/media check before calling it complete.
+Use beautiful-ui, cinematic-web-experience, and the S-tier quality bar to build a premium cinematic page. Pick the simplest Cinematic Technology Ladder rung that delivers the effect, then verify it with Playwright screenshots and a nonblank canvas/media check before calling it complete.
 ```
 
 ## Build Checklist
@@ -54,7 +56,8 @@ Use beautiful-ui, cinematic-web-experience, and the S-tier quality bar to build 
 - Cinematic promise written before implementation.
 - Art direction covers mood, palette, lighting, focal object, and density.
 - WORK and CONTACT navigation or equivalent minimal nav exists.
-- Hero uses Three.js/WebGL/canvas/media, not a static gradient.
+- Hero uses video, image sequence, Lottie, Rive, Spline, Three.js/WebGL/canvas/media, not a static gradient.
+- Technology choice starts low on the Cinematic Technology Ladder and climbs only when needed.
 - Particles, bloom, glow, glass, or smoke effects are purposeful.
 - Scroll reveal section exists after the hero.
 - Reduced motion fallback exists.

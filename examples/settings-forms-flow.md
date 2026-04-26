@@ -37,3 +37,9 @@ Verification: `ui-verification` checks state coverage, form accessibility, navig
 - Before evidence: weak-prompt output showing flat forms, unclear save behavior, weak validation, or missing destructive-action safeguards.
 - After evidence: Beautiful UI handoff excerpt showing the dependable Visual direction, form density, save model, and platform-web-ui adapter choice.
 - Check evidence: screenshot or spec notes for dirty, saving, saved, validation error, disabled, empty invite, destructive dialog, State coverage, and Accessibility.
+
+## Rendered Evidence
+
+- [Open rendered gallery case](../docs/rendered-gallery.html#settings-forms)
+- [Desktop screenshot](../docs/assets/rendered-gallery-desktop.png)
+- [Mobile screenshot](../docs/assets/rendered-gallery-mobile.png)

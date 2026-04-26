@@ -23,5 +23,7 @@ Run:
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File scripts/validate-package.ps1
+powershell -ExecutionPolicy Bypass -File scripts/verify-rendered-gallery.ps1
 ```
 
+Run the rendered-gallery verifier when you change examples, rendered evidence, gallery HTML, screenshot assets, cinematic guidance, or validation scripts. Use `-RegenerateScreenshots` when the rendered gallery changed.

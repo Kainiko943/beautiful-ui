@@ -44,7 +44,7 @@ Use beautiful-ui to redesign this app screen. Start with visual direction, defin
 Claude cinematic smoke test:
 
 ```text
-Use beautiful-ui, platform-web-ui, cinematic-web-experience, and ui-verification to build a demo-worthy dark cinematic landing page with WORK / CONTACT nav, WebGL-style focal scene, particles, bloom, glass panels, scroll reveal, mobile fallback, reduced-motion fallback, Playwright screenshots, and nonblank canvas/media verification.
+Use beautiful-ui, platform-web-ui, cinematic-web-experience, and ui-verification to build a demo-worthy dark cinematic landing page with WORK / CONTACT nav, one cinematic focal scene, particles, bloom, glass panels, scroll reveal, mobile fallback, reduced-motion fallback, Playwright screenshots, nonblank canvas/media verification, and a justified Cinematic Technology Ladder choice.
 ```
 
 Expected response shape:
@@ -62,7 +62,19 @@ Expected response shape:
 powershell -ExecutionPolicy Bypass -File scripts/validate-package.ps1
 ```
 
-The validator checks the required skill folders, public README positioning, install script presence, and each example's `## Before Prompt`, `## Beautiful UI Prompt`, `## Expected Handoff`, Visual direction, State coverage, and Accessibility evidence.
+The validator checks the required skill folders, public README positioning, install script presence, rendered gallery assets, and each example's `## Before Prompt`, `## Beautiful UI Prompt`, `## Expected Handoff`, `## Rendered Evidence`, Visual direction, State coverage, and Accessibility evidence.
+
+## Verify rendered UI evidence
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts/verify-rendered-gallery.ps1
+```
+
+The rendered-gallery verifier checks screenshot existence, image dimensions, nonblank pixel samples, rendered evidence links, required case anchors, package validation, and Playwright desktop/mobile overflow checks. To refresh the PNG evidence before checking it:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts/verify-rendered-gallery.ps1 -RegenerateScreenshots
+```
 
 ## Troubleshooting
 

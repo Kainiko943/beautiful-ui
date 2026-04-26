@@ -1,0 +1,735 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>beautiful-ui rendered before/after gallery</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #17202a;
+      --muted: #667085;
+      --line: #d9e0e7;
+      --paper: #f7f8fa;
+      --panel: #ffffff;
+      --before: #a34b3f;
+      --after: #1f7a68;
+      --blue: #315c9f;
+      --gold: #b07a24;
+      --violet: #6d5aa8;
+      --shadow: 0 18px 45px rgba(31, 42, 55, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      letter-spacing: 0;
+    }
+
+    main {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 40px 32px 56px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.65fr);
+      gap: 32px;
+      align-items: end;
+      padding: 28px 0 34px;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin: 0;
+    }
+
+    h1 {
+      max-width: 840px;
+      font-size: 52px;
+      line-height: 1.02;
+      font-weight: 760;
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.55;
+    }
+
+    .proof-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .proof-strip span {
+      min-height: 48px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      display: grid;
+      place-items: center;
+      color: #344054;
+      font-size: 13px;
+      font-weight: 720;
+      text-align: center;
+      padding: 8px;
+    }
+
+    .case-grid {
+      display: grid;
+      gap: 34px;
+    }
+
+    .case {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .case-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: start;
+      padding: 22px 24px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .case-header h2 {
+      font-size: 24px;
+      line-height: 1.15;
+    }
+
+    .case-header p {
+      max-width: 620px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: flex-end;
+      min-width: 260px;
+    }
+
+    .tag-list span {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 6px 10px;
+      color: #344054;
+      font-size: 12px;
+      font-weight: 720;
+      background: #fbfcfd;
+    }
+
+    .compare {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 360px;
+    }
+
+    .side {
+      padding: 24px;
+      min-width: 0;
+    }
+
+    .side + .side {
+      border-left: 1px solid var(--line);
+    }
+
+    .side-label {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 18px;
+      font-size: 13px;
+      font-weight: 780;
+      text-transform: uppercase;
+      color: #344054;
+    }
+
+    .side-label strong {
+      color: var(--ink);
+      font-size: 15px;
+      text-transform: none;
+    }
+
+    .marker {
+      width: 14px;
+      height: 14px;
+      border-radius: 4px;
+      display: inline-block;
+      margin-right: 8px;
+      vertical-align: -2px;
+    }
+
+    .marker.before {
+      background: var(--before);
+    }
+
+    .marker.after {
+      background: var(--after);
+    }
+
+    .mock {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fcfcfd;
+      padding: 18px;
+      min-height: 270px;
+      overflow: hidden;
+    }
+
+    .generic .bar,
+    .generic .block,
+    .generic .pill,
+    .generic .line {
+      background: #e7ebf0;
+      border-radius: 6px;
+    }
+
+    .generic .bar {
+      height: 26px;
+      width: 42%;
+      margin-bottom: 18px;
+    }
+
+    .generic .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .generic .block {
+      min-height: 78px;
+    }
+
+    .generic .line {
+      height: 12px;
+      margin: 10px 0;
+    }
+
+    .generic .line.short {
+      width: 58%;
+    }
+
+    .generic .wide {
+      min-height: 116px;
+    }
+
+    .better {
+      background: linear-gradient(180deg, #ffffff 0%, #f8faf9 100%);
+    }
+
+    .metric-row {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .metric {
+      border: 1px solid #cdd9d5;
+      border-radius: 8px;
+      background: #ffffff;
+      padding: 12px;
+    }
+
+    .metric b {
+      display: block;
+      font-size: 22px;
+      margin-top: 6px;
+    }
+
+    .metric span,
+    .table-row span,
+    .caption {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.35;
+    }
+
+    .chart {
+      min-height: 104px;
+      border: 1px solid #cdd9d5;
+      border-radius: 8px;
+      background:
+        linear-gradient(135deg, transparent 0 18%, rgba(31, 122, 104, 0.14) 18% 44%, transparent 44% 100%),
+        repeating-linear-gradient(0deg, #ffffff, #ffffff 23px, #edf1f4 24px);
+      margin-bottom: 12px;
+      position: relative;
+    }
+
+    .chart::after {
+      content: "";
+      position: absolute;
+      left: 24px;
+      right: 24px;
+      bottom: 24px;
+      height: 58px;
+      border-bottom: 4px solid var(--after);
+      border-right: 4px solid var(--after);
+      transform: skew(-18deg);
+    }
+
+    .table-row {
+      display: grid;
+      grid-template-columns: 1fr 72px 84px;
+      gap: 10px;
+      align-items: center;
+      border-top: 1px solid #e4e9ee;
+      padding: 9px 0;
+    }
+
+    .status {
+      border-radius: 999px;
+      padding: 5px 8px;
+      text-align: center;
+      font-size: 12px;
+      font-weight: 760;
+      background: #e8f4ef;
+      color: #14624f;
+    }
+
+    .phone-wrap {
+      display: grid;
+      place-items: center;
+    }
+
+    .phone {
+      width: min(240px, 100%);
+      min-height: 250px;
+      border: 8px solid #222b35;
+      border-radius: 28px;
+      background: #ffffff;
+      padding: 18px;
+      box-shadow: 0 14px 24px rgba(31, 42, 55, 0.16);
+    }
+
+    .phone .balance {
+      font-size: 30px;
+      font-weight: 780;
+      margin: 18px 0 4px;
+    }
+
+    .phone .action-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin-top: 18px;
+    }
+
+    .phone .action-grid span {
+      background: #eef3f2;
+      border: 1px solid #d5e2df;
+      border-radius: 8px;
+      padding: 10px 6px;
+      text-align: center;
+      font-size: 11px;
+      font-weight: 720;
+    }
+
+    .queue {
+      display: grid;
+      gap: 8px;
+    }
+
+    .queue-head,
+    .queue-row {
+      display: grid;
+      grid-template-columns: 36px 1.3fr 0.8fr 0.8fr 72px;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .queue-head {
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 780;
+      text-transform: uppercase;
+    }
+
+    .queue-row {
+      border: 1px solid #dde5eb;
+      border-radius: 8px;
+      padding: 10px;
+      background: #ffffff;
+      font-size: 12px;
+    }
+
+    .check {
+      width: 18px;
+      height: 18px;
+      border: 2px solid #8aa49c;
+      border-radius: 4px;
+    }
+
+    .hero-mock {
+      min-height: 250px;
+      border-radius: 8px;
+      padding: 22px;
+      background:
+        linear-gradient(90deg, rgba(23, 32, 42, 0.92), rgba(23, 32, 42, 0.5)),
+        linear-gradient(135deg, #265b6b, #d6a642);
+      color: #ffffff;
+      display: grid;
+      align-content: end;
+      gap: 12px;
+    }
+
+    .hero-mock h3 {
+      max-width: 360px;
+      font-size: 30px;
+      line-height: 1.08;
+    }
+
+    .button-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .button-row span {
+      border-radius: 8px;
+      padding: 9px 12px;
+      background: #ffffff;
+      color: var(--ink);
+      font-size: 12px;
+      font-weight: 780;
+    }
+
+    .scene {
+      position: relative;
+      min-height: 250px;
+      border-radius: 8px;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 68% 36%, rgba(243, 198, 104, 0.74), transparent 18%),
+        radial-gradient(circle at 35% 55%, rgba(94, 126, 201, 0.52), transparent 24%),
+        linear-gradient(135deg, #111827 0%, #1c2836 54%, #304a48 100%);
+      color: #ffffff;
+      padding: 22px;
+    }
+
+    .scene::before {
+      content: "";
+      position: absolute;
+      width: 140px;
+      height: 140px;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      border-radius: 50%;
+      right: 72px;
+      top: 50px;
+      box-shadow: inset 0 0 45px rgba(255, 255, 255, 0.24);
+    }
+
+    .scene h3,
+    .scene p {
+      position: relative;
+      max-width: 320px;
+    }
+
+    .scene h3 {
+      font-size: 28px;
+      line-height: 1.1;
+      margin-top: 134px;
+    }
+
+    .form-grid {
+      display: grid;
+      gap: 12px;
+    }
+
+    .field {
+      border: 1px solid #cdd9d5;
+      border-radius: 8px;
+      background: #ffffff;
+      padding: 10px 12px;
+    }
+
+    .field strong {
+      display: block;
+      font-size: 12px;
+      margin-bottom: 6px;
+    }
+
+    .field span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .field.error {
+      border-color: var(--before);
+      box-shadow: 0 0 0 3px rgba(163, 75, 63, 0.14);
+    }
+
+    .danger-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: center;
+      border-top: 1px solid #e4e9ee;
+      margin-top: 12px;
+      padding-top: 12px;
+    }
+
+    .danger-row b {
+      color: var(--before);
+    }
+
+    @media (max-width: 900px) {
+      main {
+        padding: 24px 16px 40px;
+      }
+
+      .hero,
+      .compare {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 38px;
+      }
+
+      .side + .side {
+        border-left: 0;
+        border-top: 1px solid var(--line);
+      }
+
+      .case-header {
+        display: block;
+      }
+
+      .tag-list {
+        justify-content: flex-start;
+        margin-top: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <div>
+        <h1>Rendered before/after evidence for beautiful-ui prompts.</h1>
+      </div>
+      <div>
+        <p>Each pair shows the weak-prompt failure mode beside the intended beautiful-ui handoff: clearer hierarchy, platform fit, state coverage, accessibility, and verification hooks.</p>
+        <div class="proof-strip" aria-label="Evidence types">
+          <span>Visual direction</span>
+          <span>State coverage</span>
+          <span>Platform handoff</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-grid" aria-label="Before and after gallery">
+      <article class="case" id="saas-dashboard">
+        <header class="case-header">
+          <div>
+            <h2>SaaS dashboard</h2>
+            <p>Revenue operations needs scanability, filters, failed-metric recovery, loading states, and keyboard-safe tables.</p>
+          </div>
+          <div class="tag-list"><span>platform-web-ui</span><span>loading</span><span>filters</span></div>
+        </header>
+        <div class="compare">
+          <div class="side">
+            <div class="side-label"><strong><span class="marker before"></span>Before</strong><span>Generic cards</span></div>
+            <div class="mock generic">
+              <div class="bar"></div>
+              <div class="cards"><div class="block"></div><div class="block"></div><div class="block"></div></div>
+              <div class="block wide"></div>
+              <div class="line"></div><div class="line"></div><div class="line short"></div>
+            </div>
+          </div>
+          <div class="side">
+            <div class="side-label"><strong><span class="marker after"></span>After</strong><span>Revenue hierarchy</span></div>
+            <div class="mock better">
+              <div class="metric-row">
+                <div class="metric"><span>Net revenue</span><b>$428k</b><span>+8.4% vs last month</span></div>
+                <div class="metric"><span>Expansion</span><b>31%</b><span>Filtered by segment</span></div>
+                <div class="metric"><span>At risk</span><b>12</b><span>Recovery queue</span></div>
+              </div>
+              <div class="chart"></div>
+              <div class="table-row"><b>Acme Labs</b><span>$42k</span><span class="status">Healthy</span></div>
+              <div class="table-row"><b>Northstar</b><span>$18k</span><span class="status">Watch</span></div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="case" id="mobile-finance">
+        <header class="case-header">
+          <div>
+            <h2>Mobile finance app</h2>
+            <p>Finance screens need privacy, trust cues, native navigation, readable numbers, and sync failure handling.</p>
+          </div>
+          <div class="tag-list"><span>platform-ios-ui</span><span>platform-android-ui</span><span>privacy</span></div>
+        </header>
+        <div class="compare">
+          <div class="side">
+            <div class="side-label"><strong><span class="marker before"></span>Before</strong><span>Flashy fintech</span></div>
+            <div class="mock generic phone-wrap">
+              <div class="phone">
+                <div class="bar"></div>
+                <div class="block"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="cards"><div class="block"></div><div class="block"></div><div class="block"></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="side">
+            <div class="side-label"><strong><span class="marker after"></span>After</strong><span>Calm money hierarchy</span></div>
+            <div class="mock better phone-wrap">
+              <div class="phone">
+                <span class="caption">Checking balance</span>
+                <div class="balance">$12,480.22</div>
+                <span class="caption">Updated 2 min ago. Privacy mode available.</span>
+                <div class="action-grid"><span>Send</span><span>Save</span><span>Review</span></div>
+                <div class="table-row"><b>Rent</b><span>Today</span><span class="status">Paid</span></div>
+                <div class="table-row"><b>Card</b><span>Sync</span><span class="status">Retry</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="case" id="admin-table">
+        <header class="case-header">
+          <div>
+            <h2>Admin table</h2>
+            <p>Operational queues need density, selection, bulk actions, refresh errors, and visible keyboard focus.</p>
+          </div>
+          <div class="tag-list"><span>platform-web-ui</span><span>keyboard</span><span>bulk actions</span></div>
+        </header>
+        <div class="compare">
+          <div class="side">
+            <div class="side-label"><strong><span class="marker before"></span>Before</strong><span>Decorative cards</span></div>
+            <div class="mock generic">
+              <div class="cards"><div class="block"></div><div class="block"></div><div class="block"></div></div>
+              <div class="cards"><div class="block"></div><div class="block"></div><div class="block"></div></div>
+              <div class="line"></div><div class="line short"></div>
+            </div>
+          </div>
+          <div class="side">
+            <div class="side-label"><strong><span class="marker after"></span>After</strong><span>Review queue</span></div>
+            <div class="mock better queue">
+              <div class="queue-head"><span></span><span>Request</span><span>Status</span><span>Owner</span><span>SLA</span></div>
+              <div class="queue-row"><span class="check"></span><b>Refund review</b><span>Pending</span><span>Ari</span><span class="status">2h</span></div>
+              <div class="queue-row"><span class="check"></span><b>Fraud signal</b><span>Escalated</span><span>Mo</span><span class="status">Now</span></div>
+              <div class="queue-row"><span class="check"></span><b>Address change</b><span>Ready</span><span>Lin</span><span class="status">6h</span></div>
+              <div class="caption">Bulk approve disabled until at least one eligible row is selected.</div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="case" id="landing-page">
+        <header class="case-header">
+          <div>
+            <h2>Landing page</h2>
+            <p>Conversion pages need first-viewport product proof, specific CTA states, responsive media, and validation behavior.</p>
+          </div>
+          <div class="tag-list"><span>platform-web-ui</span><span>conversion</span><span>responsive</span></div>
+        </header>
+        <div class="compare">
+          <div class="side">
+            <div class="side-label"><strong><span class="marker before"></span>Before</strong><span>Vague hero</span></div>
+            <div class="mock generic">
+              <div class="bar"></div>
+              <div class="line"></div><div class="line"></div>
+              <div class="cards"><div class="block"></div><div class="block"></div><div class="block"></div></div>
+              <div class="block wide"></div>
+            </div>
+          </div>
+          <div class="side">
+            <div class="side-label"><strong><span class="marker after"></span>After</strong><span>Product-led proof</span></div>
+            <div class="hero-mock">
+              <span class="caption">Launch operations for teams shipping every week</span>
+              <h3>Plan, approve, and release from one live command center.</h3>
+              <div class="button-row"><span>Start workspace</span><span>View release board</span></div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="case" id="cinematic-web">
+        <header class="case-header">
+          <div>
+            <h2>Cinematic web experience</h2>
+            <p>Immersive pages need a focal scene, motion model, mobile composition, reduced motion, and media fallback checks.</p>
+          </div>
+          <div class="tag-list"><span>cinematic-web-experience</span><span>WebGL</span><span>fallbacks</span></div>
+        </header>
+        <div class="compare">
+          <div class="side">
+            <div class="side-label"><strong><span class="marker before"></span>Before</strong><span>Dark gradient</span></div>
+            <div class="mock generic">
+              <div class="bar"></div>
+              <div class="block wide"></div>
+              <div class="line"></div><div class="line"></div><div class="line short"></div>
+            </div>
+          </div>
+          <div class="side">
+            <div class="side-label"><strong><span class="marker after"></span>After</strong><span>Focal scene</span></div>
+            <div class="scene">
+              <h3>One memorable scene with staged reveal.</h3>
+              <p class="caption">Particles, bloom, reduced-motion fallback, and nonblank canvas/media verification.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="case" id="settings-forms">
+        <header class="case-header">
+          <div>
+            <h2>Settings and forms flow</h2>
+            <p>Settings need a dependable save model, validation, dirty states, disabled controls, and destructive-action safeguards.</p>
+          </div>
+          <div class="tag-list"><span>platform-web-ui</span><span>forms</span><span>validation</span></div>
+        </header>
+        <div class="compare">
+          <div class="side">
+            <div class="side-label"><strong><span class="marker before"></span>Before</strong><span>Flat forms</span></div>
+            <div class="mock generic">
+              <div class="bar"></div>
+              <div class="line"></div><div class="line"></div>
+              <div class="block"></div>
+              <div class="line"></div><div class="block"></div>
+            </div>
+          </div>
+          <div class="side">
+            <div class="side-label"><strong><span class="marker after"></span>After</strong><span>Stateful save flow</span></div>
+            <div class="mock better form-grid">
+              <div class="field"><strong>Workspace name</strong><span>Beautiful UI launch</span></div>
+              <div class="field error"><strong>Billing email</strong><span>Enter a valid team email before saving.</span></div>
+              <div class="field"><strong>Invite permissions</strong><span>Owners approve external guests.</span></div>
+              <div class="danger-row"><span><b>Delete workspace</b><br><span class="caption">Requires confirmation dialog and focus trap.</span></span><span class="status">Guarded</span></div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+</body>
+</html>

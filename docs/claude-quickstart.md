@@ -25,7 +25,7 @@ Use beautiful-ui before implementation. Inspect the repo, choose a visual direct
 ## Use This For Cinematic Websites
 
 ```text
-Use beautiful-ui, platform-web-ui, cinematic-web-experience, and ui-verification. Build a demo-worthy cinematic web experience with a full-screen first viewport, sparse WORK / CONTACT navigation, one WebGL or Three.js-style focal scene, particles, bloom, glass panels, scroll reveal, reduced-motion fallback, mobile fallback, Playwright screenshots, and a nonblank canvas/media check.
+Use beautiful-ui, platform-web-ui, cinematic-web-experience, and ui-verification. Build a demo-worthy cinematic web experience with a full-screen first viewport, sparse WORK / CONTACT navigation, one cinematic focal scene, particles, bloom, glass panels, scroll reveal, reduced-motion fallback, mobile fallback, Playwright screenshots, and a nonblank canvas/media check. Choose the simplest Cinematic Technology Ladder rung that can deliver the effect: video, image sequence, Lottie, Rive, Spline, canvas, Three.js, or shaders.
 ```
 
 ## What Claude Should Do Differently
@@ -59,4 +59,3 @@ Reject output that is only:
 - no reduced-motion behavior
 - no screenshot verification
 - no state coverage
-

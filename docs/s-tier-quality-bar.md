@@ -20,6 +20,7 @@ For cinematic pages, the result must include:
 - sparse navigation
 - one memorable focal object or scene
 - controlled dark palette with glow, bloom, depth, or particles
+- justified technology choice: media, video, Lottie, Rive, Spline, canvas, WebGL, or shaders
 - scroll reveal or staged transition
 - mobile-specific composition
 - reduced-motion fallback
@@ -43,4 +44,3 @@ For cinematic pages, the result must include:
 ```text
 Use ui-verification and the S-tier quality bar. Review the UI for visual direction, hierarchy, motion, state coverage, accessibility, platform fit, mobile behavior, reduced motion, and screenshot evidence. List any failure before claiming completion.
 ```
-

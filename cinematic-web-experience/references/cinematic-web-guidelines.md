@@ -22,16 +22,21 @@
 
 ## Implementation
 
-- Use Three.js or React Three Fiber for real 3D scenes.
+- Choose the simplest technology that creates the intended cinematic effect.
+- Use static hero media, looping video, image sequences, Lottie, Rive, Spline, CSS, SVG, or lightweight canvas before reaching for custom WebGL.
+- Use Three.js or React Three Fiber for real 3D scenes that need runtime camera control, pointer interaction, procedural motion, or composed 3D objects.
+- Use custom shaders, GPGPU particles, or fluid simulations only when the brief requires procedural behavior that cannot be delivered convincingly with pre-rendered media or simpler animation tools.
 - Use postprocessing bloom only when it improves the focal subject.
 - Use CSS variables for color, spacing, and glow intensity.
 - Keep scene logic isolated from content components.
-- Lazy-load heavy 3D assets and provide a static fallback.
+- Lazy-load heavy 3D, video, Spline, Lottie, Rive, or image-sequence assets and provide a static fallback.
+- Keep asset licensing and attribution clear when using generated, purchased, or third-party media.
 
 ## Performance
 
 - Target a fast first paint with a graceful loading state.
 - Keep geometry, particles, and postprocessing modest by default.
+- Prefer pre-rendered media on mobile when live WebGL would hurt frame rate, battery, or loading.
 - Pause or simplify animation when the tab is hidden.
 - Respect `prefers-reduced-motion`.
 
@@ -40,7 +45,7 @@
 - Run the local dev server.
 - Capture desktop and mobile screenshots with Playwright.
 - Check that the canvas or media area is nonblank.
+- Check that video, Lottie, Rive, Spline, image sequence, canvas, or WebGL fallbacks load when the primary effect fails.
 - Check that text does not overlap the scene or navigation.
 - Check reduced-motion behavior.
 - Check that the page still communicates the offer if WebGL fails.
-

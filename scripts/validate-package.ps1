@@ -67,7 +67,12 @@ $requiredFiles = @(
   'recipes/claude-cinematic-web.md',
   'docs/claude-quickstart.md',
   'docs/s-tier-quality-bar.md',
+  'docs/gallery.md',
+  'docs/rendered-gallery.html',
+  'docs/assets/rendered-gallery-desktop.png',
+  'docs/assets/rendered-gallery-mobile.png',
   'scripts/install-claude-skills.ps1',
+  'scripts/verify-rendered-gallery.ps1',
   'evals/cinematic-prompts.md',
   'docs/launch-plan.md',
   'docs/install.md',
@@ -113,15 +118,24 @@ Assert-Contains 'beautiful-ui/SKILL.md' '^name: beautiful-ui$' 'core skill metad
 Assert-Contains 'platform-web-ui/SKILL.md' '^name: platform-web-ui$' 'web adapter metadata'
 Assert-Contains 'cinematic-web-experience/SKILL.md' '^name: cinematic-web-experience$' 'cinematic web skill metadata'
 Assert-Contains 'cinematic-web-experience/SKILL.md' 'Three.js|WebGL' 'cinematic web technology guidance'
+Assert-Contains 'cinematic-web-experience/SKILL.md' 'Cinematic Technology Ladder' 'cinematic technology ladder'
+Assert-Contains 'cinematic-web-experience/SKILL.md' 'Lottie|Rive|Spline' 'pre-rendered cinematic media options'
 Assert-Contains 'cinematic-web-experience/SKILL.md' 'Playwright' 'cinematic web verification guidance'
 Assert-Contains 'cinematic-web-experience/SKILL.md' 'Recreate A Reference Experience' 'reference recreation workflow'
 Assert-Contains 'recipes/claude-cinematic-web.md' 'WORK.*CONTACT' 'minimal nav requirement'
 Assert-Contains 'recipes/claude-cinematic-web.md' 'nonblank canvas' 'canvas verification requirement'
+Assert-Contains 'recipes/claude-cinematic-web.md' 'Cinematic Technology Ladder' 'recipe technology ladder'
+Assert-Contains 'evals/cinematic-prompts.md' 'do not use custom WebGL unless' 'eval technology restraint'
 Assert-Contains 'recipes/claude-cinematic-web.md' 'recreate the style' 'recreation prompt'
 Assert-Contains 'docs/claude-quickstart.md' 'Claude Code' 'Claude quickstart'
 Assert-Contains 'docs/s-tier-quality-bar.md' 'S-tier' 'S-tier quality bar'
+Assert-Contains 'docs/gallery.md' 'rendered-gallery.html' 'rendered gallery link'
+Assert-Contains 'docs/rendered-gallery.html' 'Rendered before/after evidence' 'rendered gallery title'
 Assert-Contains 'scripts/install-claude-skills.ps1' 'cinematic-web-experience' 'Claude installer copies cinematic skill'
 Assert-Contains 'scripts/install-claude-skills.ps1' 'beautiful-ui skills installed' 'Claude installer success message'
+Assert-Contains 'scripts/verify-rendered-gallery.ps1' 'nonblank|under-rendered' 'rendered screenshot nonblank check'
+Assert-Contains 'scripts/verify-rendered-gallery.ps1' 'horizontal overflow' 'rendered gallery overflow check'
+Assert-Contains 'scripts/verify-rendered-gallery.ps1' 'RegenerateScreenshots' 'rendered screenshot regeneration option'
 Assert-Contains 'evals/cinematic-prompts.md' 'Pass criteria' 'cinematic eval pass criteria'
 Assert-Contains 'evals/cinematic-prompts.md' 'Claude should' 'Claude eval expectation'
 Assert-Contains 'platform-ios-ui/SKILL.md' '^name: platform-ios-ui$' 'iOS adapter metadata'
@@ -137,6 +151,7 @@ foreach ($example in $examples) {
   Assert-Contains $relative 'Visual direction' 'visual direction evidence'
   Assert-Contains $relative 'State coverage' 'state coverage evidence'
   Assert-Contains $relative 'Accessibility' 'accessibility evidence'
+  Assert-Contains $relative '## Rendered Evidence' 'rendered evidence links'
 }
 
 if ($failures.Count -gt 0) {

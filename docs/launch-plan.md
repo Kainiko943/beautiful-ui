@@ -4,8 +4,9 @@
 
 - Package inventory complete.
 - README includes the tagline, 10-second demo, install, examples, compatibility matrix, prompts, and heritage note.
-- Six examples include before prompts, beautiful-ui prompts, expected handoff, evidence capture notes, state coverage, accessibility, and adapter selection.
+- Six examples include before prompts, beautiful-ui prompts, expected handoff, rendered evidence links, state coverage, accessibility, and adapter selection.
 - Validation script passes.
+- Rendered gallery verifier passes.
 - Install docs tested for local copy flow.
 - License, contributing guide, roadmap, and issue templates exist.
 - First release notes drafted.

@@ -2,17 +2,21 @@
 
 Make AI coding agents design beautiful, accessible, platform-native UI.
 
-Beautiful UI is the taste layer Claude users install when they want S-tier UI instead of generic AI screens. It teaches Codex, Claude Code, Cursor-style agents, and other coding assistants to choose a visual direction, reuse the repo's design system, cover states, adapt to the target platform, and verify the handoff before writing UI code. It includes a cinematic web path for demo-worthy cinematic web experiences with WebGL/Three.js direction, motion systems, responsive fallbacks, and visual verification.
+Beautiful UI is the taste layer Claude users install when they want S-tier UI instead of generic AI screens. It teaches Codex, Claude Code, Cursor-style agents, and other coding assistants to choose a visual direction, reuse the repo's design system, cover states, adapt to the target platform, and verify the handoff before writing UI code. It includes a cinematic web path for demo-worthy cinematic web experiences with a technology ladder for video, Lottie, Rive, Spline, canvas, Three.js/WebGL, shaders, motion systems, responsive fallbacks, and visual verification.
 
 ![Beautiful UI comparison: without beautiful-ui vs with beautiful-ui](docs/assets/beautiful-ui-comparison.png)
 
 Born from a component-driven UI framework, rebuilt for AI agents.
 
+See the [rendered before/after gallery](docs/gallery.md) for browser-captured evidence examples across dashboards, mobile finance, admin tables, landing pages, cinematic web, and settings flows.
+
+Run `powershell -ExecutionPolicy Bypass -File scripts/verify-rendered-gallery.ps1` to enforce the rendered evidence gate: screenshot dimensions, nonblank pixels, example links, package validation, and Playwright desktop/mobile overflow checks.
+
 ## Why Claude users install it
 
 - Claude stops jumping straight to generic layouts.
 - It gets a repeatable design workflow before implementation.
-- Cinematic builds get a strict recipe: WebGL/Three.js, particles, bloom, glass, scroll reveals, fallbacks, and Playwright screenshots.
+- Cinematic builds get a strict recipe: choose the right media/3D technology, add particles, bloom, glass, scroll reveals, fallbacks, and Playwright screenshots.
 - Every output is judged against an S-tier quality bar before it is treated as complete.
 
 Start here: [Claude quickstart](docs/claude-quickstart.md), [S-tier quality bar](docs/s-tier-quality-bar.md), and [cinematic eval prompts](evals/cinematic-prompts.md).
@@ -102,7 +106,7 @@ Use beautiful-ui with the web adapter. Design responsive desktop and mobile layo
 ```
 
 ```text
-Use beautiful-ui and cinematic-web-experience to build a premium dark WebGL landing page with a full-screen hero, particles, bloom, glass panels, scroll reveals, reduced-motion fallback, and Playwright screenshot verification.
+Use beautiful-ui and cinematic-web-experience to build a premium dark cinematic landing page with a full-screen focal scene, particles, bloom, glass panels, scroll reveals, reduced-motion fallback, Playwright screenshot verification, and a justified Cinematic Technology Ladder choice.
 ```
 
 For a stricter Claude-ready workflow, use [the cinematic web recipe](recipes/claude-cinematic-web.md).

@@ -4,7 +4,7 @@
 
 - Ship the core `beautiful-ui` skill.
 - Ship web, iOS, Android, and verification skills.
-- Ship cinematic web experience guidance for demo-worthy WebGL/Three.js-style launches.
+- Ship cinematic web experience guidance for demo-worthy media, Spline, canvas, WebGL/Three.js, and shader-style launches.
 - Publish five before/after examples.
 - Document install paths for major agent surfaces.
 - Add contribution and issue templates.

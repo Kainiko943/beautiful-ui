@@ -37,3 +37,9 @@ Verification: `ui-verification` checks native navigation, privacy-sensitive stat
 - Before evidence: weak-prompt output showing flashy finance styling, small financial data, missing trust cues, or no privacy treatment.
 - After evidence: Beautiful UI handoff excerpt showing the trust-focused Visual direction, platform split for iOS and Android, and calm number hierarchy.
 - Check evidence: screenshots or spec notes for hidden balance, sync loading/failure, validation, success, disabled submit, State coverage, and Accessibility.
+
+## Rendered Evidence
+
+- [Open rendered gallery case](../docs/rendered-gallery.html#mobile-finance)
+- [Desktop screenshot](../docs/assets/rendered-gallery-desktop.png)
+- [Mobile screenshot](../docs/assets/rendered-gallery-mobile.png)
