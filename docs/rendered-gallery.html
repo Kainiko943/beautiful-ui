@@ -68,7 +68,7 @@
 
     .proof-strip {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 10px;
       margin-top: 22px;
     }
@@ -137,6 +137,34 @@
       font-size: 12px;
       font-weight: 720;
       background: #fbfcfd;
+    }
+
+    .rubric-note {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #ffffff;
+      padding: 16px 18px;
+      margin: 0 0 26px;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .rubric-note p {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    .score-pill {
+      border-radius: 999px;
+      background: #e8f4ef;
+      color: #14624f;
+      font-size: 13px;
+      font-weight: 780;
+      padding: 8px 12px;
+      white-space: nowrap;
     }
 
     .compare {
@@ -523,6 +551,11 @@
         justify-content: flex-start;
         margin-top: 14px;
       }
+
+      .proof-strip,
+      .rubric-note {
+        grid-template-columns: 1fr 1fr;
+      }
     }
   </style>
 </head>
@@ -538,8 +571,14 @@
           <span>Visual direction</span>
           <span>State coverage</span>
           <span>Platform handoff</span>
+          <span>Rubric score</span>
         </div>
       </div>
+    </section>
+
+    <section class="rubric-note" aria-label="Rubric scoring summary">
+      <p>Seeded scores use the UI quality rubric to show the intended delta for each Beautiful UI handoff. Real model-run artifacts should keep raw baseline output, Beautiful UI output, screenshots, and scorecards together.</p>
+      <span class="score-pill">Average target: 3.6 / 4</span>
     </section>
 
     <section class="case-grid" aria-label="Before and after gallery">
@@ -549,7 +588,7 @@
             <h2>SaaS dashboard</h2>
             <p>Revenue operations needs scanability, filters, failed-metric recovery, loading states, and keyboard-safe tables.</p>
           </div>
-          <div class="tag-list"><span>platform-web-ui</span><span>loading</span><span>filters</span></div>
+          <div class="tag-list"><span>platform-web-ui</span><span>loading</span><span>filters</span><span>score 3.6</span></div>
         </header>
         <div class="compare">
           <div class="side">
@@ -583,7 +622,7 @@
             <h2>Mobile finance app</h2>
             <p>Finance screens need privacy, trust cues, native navigation, readable numbers, and sync failure handling.</p>
           </div>
-          <div class="tag-list"><span>platform-ios-ui</span><span>platform-android-ui</span><span>privacy</span></div>
+          <div class="tag-list"><span>platform-ios-ui</span><span>platform-android-ui</span><span>privacy</span><span>score 3.5</span></div>
         </header>
         <div class="compare">
           <div class="side">
@@ -620,7 +659,7 @@
             <h2>Admin table</h2>
             <p>Operational queues need density, selection, bulk actions, refresh errors, and visible keyboard focus.</p>
           </div>
-          <div class="tag-list"><span>platform-web-ui</span><span>keyboard</span><span>bulk actions</span></div>
+          <div class="tag-list"><span>platform-web-ui</span><span>keyboard</span><span>bulk actions</span><span>score 3.7</span></div>
         </header>
         <div class="compare">
           <div class="side">
@@ -650,7 +689,7 @@
             <h2>Landing page</h2>
             <p>Conversion pages need first-viewport product proof, specific CTA states, responsive media, and validation behavior.</p>
           </div>
-          <div class="tag-list"><span>platform-web-ui</span><span>conversion</span><span>responsive</span></div>
+          <div class="tag-list"><span>platform-web-ui</span><span>conversion</span><span>responsive</span><span>score 3.7</span></div>
         </header>
         <div class="compare">
           <div class="side">
@@ -679,7 +718,7 @@
             <h2>Cinematic web experience</h2>
             <p>Immersive pages need a focal scene, motion model, mobile composition, reduced motion, and media fallback checks.</p>
           </div>
-          <div class="tag-list"><span>cinematic-web-experience</span><span>WebGL</span><span>fallbacks</span></div>
+          <div class="tag-list"><span>cinematic-web-experience</span><span>WebGL</span><span>fallbacks</span><span>score 3.8</span></div>
         </header>
         <div class="compare">
           <div class="side">
@@ -706,7 +745,7 @@
             <h2>Settings and forms flow</h2>
             <p>Settings need a dependable save model, validation, dirty states, disabled controls, and destructive-action safeguards.</p>
           </div>
-          <div class="tag-list"><span>platform-web-ui</span><span>forms</span><span>validation</span></div>
+          <div class="tag-list"><span>platform-web-ui</span><span>forms</span><span>validation</span><span>score 3.6</span></div>
         </header>
         <div class="compare">
           <div class="side">

@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "name": "Beautiful UI Quality Rubric",
+  "scale": {
+    "min": 0,
+    "max": 4,
+    "labels": {
+      "0": "missing or actively harmful",
+      "1": "generic or incomplete",
+      "2": "usable but underspecified",
+      "3": "strong and implementation-ready",
+      "4": "excellent, specific, and verified"
+    }
+  },
+  "passThreshold": {
+    "minimumAverage": 3.0,
+    "minimumPerDimension": 2,
+    "requiredDimensions": [
+      "accessibility",
+      "state-coverage",
+      "verification-evidence"
+    ]
+  },
+  "criticalFailures": [
+    "No product-specific visual direction",
+    "No meaningful state coverage",
+    "No accessibility or focus guidance",
+    "Desktop-only composition for responsive work",
+    "Claims completion without evidence"
+  ],
+  "dimensions": [
+    {
+      "id": "visual-direction",
+      "label": "Visual Direction",
+      "question": "Is the art direction product-specific enough to guide implementation?"
+    },
+    {
+      "id": "hierarchy",
+      "label": "Hierarchy",
+      "question": "Do typography, layout, and information priority make the primary workflow obvious?"
+    },
+    {
+      "id": "real-visual-subject",
+      "label": "Real Visual Subject",
+      "question": "Does the design include real product UI, media, canvas, 3D, or another purposeful visual subject?"
+    },
+    {
+      "id": "state-coverage",
+      "label": "State Coverage",
+      "question": "Are loading, empty, error, success, disabled, focus, selected, and validation states covered where relevant?"
+    },
+    {
+      "id": "accessibility",
+      "label": "Accessibility",
+      "question": "Are contrast, semantic structure, labels, focus, keyboard/touch navigation, text scaling, and reduced motion addressed?"
+    },
+    {
+      "id": "platform-fit",
+      "label": "Platform Fit",
+      "question": "Does the handoff respect the target platform, device, input model, and framework constraints?"
+    },
+    {
+      "id": "responsive-behavior",
+      "label": "Responsive Behavior",
+      "question": "Are desktop, tablet, and mobile layout changes intentional and verifiable?"
+    },
+    {
+      "id": "motion-fallbacks",
+      "label": "Motion And Fallbacks",
+      "question": "Does motion support the experience, and are reduced-motion or media fallbacks defined?"
+    },
+    {
+      "id": "verification-evidence",
+      "label": "Verification Evidence",
+      "question": "Are screenshots, checks, scorecards, or concrete verification steps captured?"
+    }
+  ]
+}

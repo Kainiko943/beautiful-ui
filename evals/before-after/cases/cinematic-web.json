@@ -1,0 +1,9 @@
+{
+  "id": "cinematic-web",
+  "title": "Cinematic Web Experience",
+  "baselinePrompt": "Make a cool website for my AI product.",
+  "beautifulUiPrompt": "Use beautiful-ui, platform-web-ui, cinematic-web-experience, and ui-verification. Build a demo-worthy cinematic web experience with a focal scene, particles, bloom, glass panels, scroll reveal, reduced-motion fallback, mobile fallback, screenshots, and nonblank media checks.",
+  "expectedDelta": "Moves from a dark gradient landing page to a justified cinematic technology choice, focal scene, motion model, fallback plan, and visual verification.",
+  "rubricTargets": ["visual-direction", "real-visual-subject", "motion-fallbacks", "responsive-behavior", "verification-evidence"],
+  "evidenceToCapture": ["desktop first viewport", "mobile fallback", "reduced-motion state", "nonblank canvas/media check"]
+}

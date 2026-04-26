@@ -1,0 +1,9 @@
+{
+  "id": "settings-forms",
+  "title": "Settings And Forms Flow",
+  "baselinePrompt": "Make these settings forms nicer.",
+  "beautifulUiPrompt": "Use beautiful-ui and platform-web-ui to redesign this settings flow with save model, dirty state, validation, disabled controls, destructive action safeguards, focus management, and verification notes.",
+  "expectedDelta": "Moves from flat form styling to dependable stateful settings behavior with validation, save feedback, and guarded destructive actions.",
+  "rubricTargets": ["hierarchy", "state-coverage", "accessibility", "platform-fit", "verification-evidence"],
+  "evidenceToCapture": ["dirty state", "validation error", "saved confirmation", "destructive confirmation focus behavior"]
+}

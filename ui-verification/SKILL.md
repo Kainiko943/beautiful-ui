@@ -18,6 +18,7 @@ Use this skill at the end of UI design work. Check that the output is visually c
 - State coverage
 - Platform fit
 - Implementation handoff completeness
+- UI quality rubric score when comparing before/after examples or public proof artifacts
 
 ## Pass Criteria
 
@@ -26,4 +27,4 @@ Use this skill at the end of UI design work. Check that the output is visually c
 - Important screens include empty, loading, error, success, disabled, focus, and selection states where relevant.
 - Accessibility notes include contrast, text scaling, focus behavior, and reduced motion.
 - Platform guidance is native to the target, not generic web-first UI.
-
+- Public examples meet the UI quality rubric threshold and avoid critical failures.

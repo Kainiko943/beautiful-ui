@@ -1,6 +1,6 @@
 # S-tier Quality Bar
 
-Use this bar to decide whether an AI-built interface is worth showing publicly.
+Use this bar to decide whether an AI-built interface is worth showing publicly. For scored comparisons, use the measurable rubric in [UI Quality Rubric](rubrics/ui-quality-rubric.md).
 
 ## S-tier Means
 
@@ -11,6 +11,7 @@ Use this bar to decide whether an AI-built interface is worth showing publicly.
 - Motion supports reveal, depth, continuity, or interaction.
 - States and accessibility are part of the design, not afterthoughts.
 - The result is verified with screenshots or equivalent visual checks.
+- Public examples pass the UI quality rubric without critical failures.
 
 ## Cinematic Web S-tier
 

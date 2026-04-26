@@ -18,9 +18,9 @@
 
 ## Months 4-6: Make it hard to ignore
 
-- Add framework guides for shadcn, Tailwind, SwiftUI, UIKit, Android Compose, Flutter, and React Native.
-- Add a gallery site generated from examples.
-- Add agent evals showing output with and without the skill.
+- Expand framework guides beyond the shipped shadcn + Tailwind adapter to SwiftUI, UIKit, Android Compose, Flutter, and React Native.
+- Grow the proof gallery with real model-run screenshots for each seeded before/after eval.
+- Add automated agent eval runs showing output with and without the skill.
 
 ## Months 7-9: Ecosystem expansion
 

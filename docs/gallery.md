@@ -6,7 +6,9 @@
 
 Run `powershell -ExecutionPolicy Bypass -File scripts/verify-rendered-gallery.ps1` from the repository root to check that the gallery loads, screenshots are nonblank, example links resolve, and desktop/mobile layouts avoid horizontal overflow.
 
-The gallery is intentionally prompt-led in v0.1. Each example shows how a weak prompt becomes a stronger design handoff, then names the evidence to capture when comparing outputs.
+The gallery is intentionally prompt-led in v0.1. Each example shows how a weak prompt becomes a stronger design handoff, then names the evidence to capture when comparing outputs. Case metadata lives in [gallery-cases.json](gallery-cases.json), and comparison contracts live in [before/after eval artifacts](../evals/before-after/README.md).
+
+Use the [UI quality rubric](rubrics/ui-quality-rubric.md) to score real runs. Seeded gallery scores represent the intended handoff contract; live model-run scores should be stored with the raw run artifacts.
 
 For now, "before" means the weak prompt and its likely failure mode. "After" means the Beautiful UI prompt, expected handoff, rendered gallery case, and evidence checklist. Future gallery versions should add per-example screenshot sets and agent evals comparing outputs with and without the skill.
 
@@ -18,6 +20,15 @@ For now, "before" means the weak prompt and its likely failure mode. "After" mea
 | [Landing page](../examples/landing-page.md) | Vague hero and card pile | Product-led conversion hierarchy | First-viewport product proof, CTA states, responsive mobile layout |
 | [Cinematic web experience](../examples/cinematic-web-experience.md) | Cool website with no art direction | Cinematic focal scene, technology ladder choice, motion model, fallbacks | Desktop/mobile screenshots, nonblank canvas/media check, reduced-motion fallback |
 | [Settings forms flow](../examples/settings-forms-flow.md) | Flat forms | Clear save, validation, and destructive-action states | Dirty/saved/error states, validation copy, dialog focus behavior |
+
+## Eval Contracts
+
+- [SaaS dashboard](../evals/before-after/cases/saas-dashboard.json)
+- [Mobile finance app](../evals/before-after/cases/mobile-finance.json)
+- [Admin table](../evals/before-after/cases/admin-table.json)
+- [Landing page](../evals/before-after/cases/landing-page.json)
+- [Cinematic web experience](../evals/before-after/cases/cinematic-web.json)
+- [Settings and forms flow](../evals/before-after/cases/settings-forms.json)
 
 Each linked example keeps the validator-required sections: `## Before Prompt`, `## Beautiful UI Prompt`, and `## Expected Handoff`.
 

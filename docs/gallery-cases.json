@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "rubric": "rubrics/ui-quality-rubric.md",
+  "cases": [
+    { "id": "saas-dashboard", "title": "SaaS dashboard", "score": 3.6, "eval": "../evals/before-after/cases/saas-dashboard.json" },
+    { "id": "mobile-finance", "title": "Mobile finance app", "score": 3.5, "eval": "../evals/before-after/cases/mobile-finance.json" },
+    { "id": "admin-table", "title": "Admin table", "score": 3.7, "eval": "../evals/before-after/cases/admin-table.json" },
+    { "id": "landing-page", "title": "Landing page", "score": 3.7, "eval": "../evals/before-after/cases/landing-page.json" },
+    { "id": "cinematic-web", "title": "Cinematic web experience", "score": 3.8, "eval": "../evals/before-after/cases/cinematic-web.json" },
+    { "id": "settings-forms", "title": "Settings and forms flow", "score": 3.6, "eval": "../evals/before-after/cases/settings-forms.json" }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "id": "admin-table",
+  "title": "Admin Table",
+  "baselinePrompt": "Make this admin table look modern.",
+  "beautifulUiPrompt": "Use beautiful-ui and platform-web-ui to redesign this admin table as a dense operational review queue with selection, bulk actions, loading, empty, error, keyboard focus, and accessibility states.",
+  "expectedDelta": "Moves from decorative cards to a dense keyboard-friendly queue with explicit table, selection, and bulk-action behavior.",
+  "rubricTargets": ["hierarchy", "state-coverage", "accessibility", "platform-fit", "verification-evidence"],
+  "evidenceToCapture": ["table density screenshot", "keyboard focus state", "bulk action disabled/enabled states", "refresh error state"]
+}

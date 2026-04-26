@@ -8,6 +8,7 @@ Copy these folders into your Claude skills directory or include them as project-
 
 - `beautiful-ui`
 - `platform-web-ui`
+- `framework-shadcn-tailwind-ui` for shadcn/ui and Tailwind web apps
 - `cinematic-web-experience`
 - `ui-verification`
 
@@ -20,6 +21,12 @@ For mobile work, also include:
 
 ```text
 Use beautiful-ui before implementation. Inspect the repo, choose a visual direction, define the design-system core, select the platform adapter, design key screens and states, and run ui-verification before calling the UI complete.
+```
+
+For shadcn/ui and Tailwind projects:
+
+```text
+Use beautiful-ui, platform-web-ui, framework-shadcn-tailwind-ui, and ui-verification. Inspect local components, tokens, variants, and CSS variables before designing or implementing the UI.
 ```
 
 ## Use This For Cinematic Websites

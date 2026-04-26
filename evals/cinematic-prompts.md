@@ -1,6 +1,7 @@
 # Cinematic Prompt Evals
 
 Use these prompts to test whether the skill materially improves Claude's UI output.
+For cross-example comparison contracts, see [before/after eval artifacts](before-after/README.md). Score public outputs with [the UI quality rubric](rubrics/ui-quality-rubric.json).
 
 ## Eval 1: Weak Prompt Baseline
 

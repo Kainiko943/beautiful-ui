@@ -33,6 +33,7 @@ Use this skill when the primary job is UI design quality. Do not jump straight i
 ## Adapter Selection
 
 - Use `platform-web-ui` for responsive browser products.
+- Use `framework-shadcn-tailwind-ui` with `platform-web-ui` when the repo uses shadcn/ui, Tailwind CSS, `components.json`, or local `components/ui` source.
 - Use `cinematic-web-experience` with `platform-web-ui` when the user asks for a premium, demo-worthy, immersive, WebGL, Three.js, portfolio, product showcase, or wow-factor web experience.
 - Use `platform-ios-ui` for iPhone or iPad-first native apps.
 - Use `platform-android-ui` for Android-first native apps.
@@ -54,6 +55,8 @@ When the user is using Claude Code and wants a noticeably better UI result, rout
 
 - `docs/claude-quickstart.md`
 - `docs/s-tier-quality-bar.md`
+- `docs/rubrics/ui-quality-rubric.md`
+- `docs/framework-guides/shadcn-tailwind.md` for shadcn/ui and Tailwind work
 - `recipes/claude-cinematic-web.md` for cinematic web work
 - `evals/cinematic-prompts.md` for before/after quality checks
 

@@ -1,0 +1,9 @@
+{
+  "id": "landing-page",
+  "title": "Landing Page",
+  "baselinePrompt": "Build a landing page for my product.",
+  "beautifulUiPrompt": "Use beautiful-ui to design a conversion-focused landing page for a developer tool. Define the brand mood, hero media direction, typography, proof strategy, responsive layout, form validation, disabled submit, and success states.",
+  "expectedDelta": "Moves from vague hero copy and generic feature cards to first-viewport product proof, CTA hierarchy, validation states, and mobile conversion flow.",
+  "rubricTargets": ["visual-direction", "real-visual-subject", "hierarchy", "state-coverage", "responsive-behavior"],
+  "evidenceToCapture": ["first viewport product proof", "mobile layout", "email validation state", "success confirmation"]
+}

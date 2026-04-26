@@ -1,0 +1,9 @@
+{
+  "id": "mobile-finance",
+  "title": "Mobile Finance App",
+  "baselinePrompt": "Design a finance app home screen.",
+  "beautifulUiPrompt": "Use beautiful-ui to design a trustworthy mobile finance home screen. Cover privacy mode, sync failure, readable balances, iOS and Android adaptation, and verification notes.",
+  "expectedDelta": "Moves from flashy fintech decoration to calm money hierarchy, privacy cues, native mobile behavior, and sync/error coverage.",
+  "rubricTargets": ["visual-direction", "hierarchy", "accessibility", "platform-fit", "responsive-behavior"],
+  "evidenceToCapture": ["iPhone layout", "Android adaptation notes", "privacy mode state", "sync retry state"]
+}

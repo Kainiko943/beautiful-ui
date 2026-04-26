@@ -8,7 +8,7 @@ Beautiful UI is the taste layer Claude users install when they want S-tier UI in
 
 Born from a component-driven UI framework, rebuilt for AI agents.
 
-See the [rendered before/after gallery](docs/gallery.md) for browser-captured evidence examples across dashboards, mobile finance, admin tables, landing pages, cinematic web, and settings flows.
+See the [rendered before/after gallery](docs/gallery.md) for browser-captured evidence examples across dashboards, mobile finance, admin tables, landing pages, cinematic web, and settings flows. The gallery now pairs each example with seeded before/after eval contracts and a [UI quality rubric](docs/rubrics/ui-quality-rubric.md).
 
 Run `powershell -ExecutionPolicy Bypass -File scripts/verify-rendered-gallery.ps1` to enforce the rendered evidence gate: screenshot dimensions, nonblank pixels, example links, package validation, and Playwright desktop/mobile overflow checks.
 
@@ -19,7 +19,7 @@ Run `powershell -ExecutionPolicy Bypass -File scripts/verify-rendered-gallery.ps
 - Cinematic builds get a strict recipe: choose the right media/3D technology, add particles, bloom, glass, scroll reveals, fallbacks, and Playwright screenshots.
 - Every output is judged against an S-tier quality bar before it is treated as complete.
 
-Start here: [Claude quickstart](docs/claude-quickstart.md), [S-tier quality bar](docs/s-tier-quality-bar.md), and [cinematic eval prompts](evals/cinematic-prompts.md).
+Start here: [Claude quickstart](docs/claude-quickstart.md), [S-tier quality bar](docs/s-tier-quality-bar.md), and [cinematic eval prompts](evals/cinematic-prompts.md). For React teams, use the [shadcn + Tailwind guide](docs/framework-guides/shadcn-tailwind.md).
 
 ## Start in 60 seconds
 
@@ -27,6 +27,12 @@ Start here: [Claude quickstart](docs/claude-quickstart.md), [S-tier quality bar]
 git clone https://github.com/Kainiko943/beautiful-ui.git
 cd beautiful-ui
 powershell -ExecutionPolicy Bypass -File scripts/install-claude-skills.ps1
+```
+
+For Codex:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts/install-codex-skills.ps1
 ```
 
 Then ask your agent:
@@ -63,6 +69,7 @@ Manual install:
 git clone https://github.com/Kainiko943/beautiful-ui.git
 cp -R beautiful-ui/beautiful-ui ~/.codex/skills/
 cp -R beautiful-ui/platform-web-ui ~/.codex/skills/
+cp -R beautiful-ui/framework-shadcn-tailwind-ui ~/.codex/skills/
 cp -R beautiful-ui/cinematic-web-experience ~/.codex/skills/
 cp -R beautiful-ui/platform-ios-ui ~/.codex/skills/
 cp -R beautiful-ui/platform-android-ui ~/.codex/skills/

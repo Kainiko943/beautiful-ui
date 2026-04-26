@@ -106,6 +106,7 @@ function Invoke-Playwright([string[]]$arguments, [string]$label) {
 }
 
 $galleryHtml = 'docs/rendered-gallery.html'
+$galleryCases = 'docs/gallery-cases.json'
 $desktopPng = 'docs/assets/rendered-gallery-desktop.png'
 $mobilePng = 'docs/assets/rendered-gallery-mobile.png'
 $requiredCases = @(
@@ -118,6 +119,7 @@ $requiredCases = @(
 )
 
 Assert-File $galleryHtml
+Assert-File $galleryCases
 Assert-File $desktopPng
 Assert-File $mobilePng
 
@@ -127,12 +129,17 @@ foreach ($case in $requiredCases) {
 
 Assert-Contains 'docs/gallery.md' 'assets/rendered-gallery-desktop\.png' 'desktop rendered screenshot reference'
 Assert-Contains 'docs/gallery.md' 'rendered-gallery\.html' 'rendered gallery HTML reference'
+Assert-Contains 'docs/gallery.md' 'gallery-cases\.json' 'gallery case metadata reference'
+Assert-Contains $galleryHtml 'Rubric score' 'rubric score proof strip'
+Assert-Contains $galleryHtml 'Average target: 3\.6 / 4' 'average rubric target'
 
-$galleryWriteTime = (Get-Item (Join-Path $Root $galleryHtml)).LastWriteTimeUtc
-foreach ($screenshot in @($desktopPng, $mobilePng)) {
-  $screenshotPath = Join-Path $Root $screenshot
-  if ((Test-Path $screenshotPath -PathType Leaf) -and (Get-Item $screenshotPath).LastWriteTimeUtc -lt $galleryWriteTime) {
-    Add-Failure "$screenshot is older than $galleryHtml; run verify-rendered-gallery.ps1 -RegenerateScreenshots"
+if (-not $RegenerateScreenshots) {
+  $galleryWriteTime = (Get-Item (Join-Path $Root $galleryHtml)).LastWriteTimeUtc
+  foreach ($screenshot in @($desktopPng, $mobilePng)) {
+    $screenshotPath = Join-Path $Root $screenshot
+    if ((Test-Path $screenshotPath -PathType Leaf) -and (Get-Item $screenshotPath).LastWriteTimeUtc -lt $galleryWriteTime) {
+      Add-Failure "$screenshot is older than $galleryHtml; run verify-rendered-gallery.ps1 -RegenerateScreenshots"
+    }
   }
 }
 

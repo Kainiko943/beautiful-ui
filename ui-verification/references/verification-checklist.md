@@ -25,3 +25,8 @@
 - Do layout, density, and interaction patterns fit the device and input model?
 - Is intentional divergence documented for multi-platform work?
 
+## Rubric Evidence
+
+- Does the output score at least 3.0 average on `docs/rubrics/ui-quality-rubric.md`?
+- Are accessibility, state coverage, and verification evidence each 3 or higher?
+- Are critical failures absent?

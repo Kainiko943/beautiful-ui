@@ -1,0 +1,9 @@
+{
+  "id": "saas-dashboard",
+  "title": "SaaS Dashboard",
+  "baselinePrompt": "Make a dashboard UI.",
+  "beautifulUiPrompt": "Use beautiful-ui to redesign this dashboard. Inspect the repo, choose a visual direction, define tokens, cover empty/loading/error states, adapt for web, and return implementation-ready handoff.",
+  "expectedDelta": "Moves from generic metric cards to revenue-operations hierarchy with filters, recovery states, table density, and browser verification.",
+  "rubricTargets": ["visual-direction", "hierarchy", "state-coverage", "platform-fit", "verification-evidence"],
+  "evidenceToCapture": ["desktop dashboard screenshot", "mobile responsive screenshot", "filter loading/error states", "keyboard focus evidence"]
+}

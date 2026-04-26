@@ -4,12 +4,14 @@
 
 ```powershell
 git clone https://github.com/Kainiko943/beautiful-ui.git
-Copy-Item -Recurse beautiful-ui\beautiful-ui $env:USERPROFILE\.codex\skills\
-Copy-Item -Recurse beautiful-ui\platform-web-ui $env:USERPROFILE\.codex\skills\
-Copy-Item -Recurse beautiful-ui\cinematic-web-experience $env:USERPROFILE\.codex\skills\
-Copy-Item -Recurse beautiful-ui\platform-ios-ui $env:USERPROFILE\.codex\skills\
-Copy-Item -Recurse beautiful-ui\platform-android-ui $env:USERPROFILE\.codex\skills\
-Copy-Item -Recurse beautiful-ui\ui-verification $env:USERPROFILE\.codex\skills\
+cd beautiful-ui
+powershell -ExecutionPolicy Bypass -File scripts/install-codex-skills.ps1
+```
+
+The Codex installer writes to `$env:CODEX_HOME\skills` when `CODEX_HOME` is set. Otherwise it installs to `%USERPROFILE%\.codex\skills`. To install somewhere else:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts/install-codex-skills.ps1 -CodexSkillsDir "C:\path\to\codex\skills"
 ```
 
 ## Claude Code install
@@ -32,6 +34,7 @@ Add these files as project rules or agent context:
 
 - `beautiful-ui/SKILL.md`
 - `cinematic-web-experience/SKILL.md` for immersive, demo-worthy web experiences
+- `framework-shadcn-tailwind-ui/SKILL.md` for shadcn/ui and Tailwind web apps
 - the relevant platform adapter
 - `ui-verification/SKILL.md`
 
@@ -63,6 +66,12 @@ powershell -ExecutionPolicy Bypass -File scripts/validate-package.ps1
 ```
 
 The validator checks the required skill folders, public README positioning, install script presence, rendered gallery assets, and each example's `## Before Prompt`, `## Beautiful UI Prompt`, `## Expected Handoff`, `## Rendered Evidence`, Visual direction, State coverage, and Accessibility evidence.
+
+Validate before/after eval artifacts:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts/validate-eval-artifacts.ps1
+```
 
 ## Verify rendered UI evidence
 

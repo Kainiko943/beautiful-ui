@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "description": "Seeded before/after comparison contracts for Beautiful UI examples.",
+  "rubric": "../rubrics/ui-quality-rubric.json",
+  "cases": [
+    { "id": "saas-dashboard", "file": "cases/saas-dashboard.json", "example": "../../examples/saas-dashboard.md" },
+    { "id": "mobile-finance", "file": "cases/mobile-finance.json", "example": "../../examples/mobile-finance-app.md" },
+    { "id": "admin-table", "file": "cases/admin-table.json", "example": "../../examples/admin-table.md" },
+    { "id": "landing-page", "file": "cases/landing-page.json", "example": "../../examples/landing-page.md" },
+    { "id": "cinematic-web", "file": "cases/cinematic-web.json", "example": "../../examples/cinematic-web-experience.md" },
+    { "id": "settings-forms", "file": "cases/settings-forms.json", "example": "../../examples/settings-forms-flow.md" }
+  ]
+}

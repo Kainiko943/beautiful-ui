@@ -16,6 +16,7 @@ Use this adapter when the design target is a browser-based product. Preserve the
 - Keep forms, tables, filters, and navigation feasible in HTML/CSS terms.
 - Use semantic structure, keyboard navigation, visible focus, and contrast checks.
 - Prefer implementation notes that can be verified in a browser.
+- If the repo uses shadcn/ui or Tailwind CSS, load `framework-shadcn-tailwind-ui` and map visual decisions to local components, tokens, and variants.
 
 ## Handoff Must Include
 
@@ -24,4 +25,3 @@ Use this adapter when the design target is a browser-based product. Preserve the
 - Form and table behavior
 - Focus and keyboard behavior
 - Reduced motion notes
-
